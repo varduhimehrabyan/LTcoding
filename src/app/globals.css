@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import 'aos/dist/aos.css';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-colorBlue: #1A8EF7;
+  --color-lightGray: #767676;
+  --color-darkGray: #06141D;
+  --color-brightGray: #EFEFEF;
+  --color-teal: #008081;
+  --color-chineseBlack: #101010;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.textPrimaryColor {
+  color: #008081;
+}
+.secondaryColorLinear {
+  background: #6201fa;
+  background: linear-gradient(
+    180deg,
+    rgba(98, 1, 250, 1) 0%,
+    rgba(12, 22, 130, 1) 100%
+  );
+}
+

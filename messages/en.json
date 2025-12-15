@@ -1,0 +1,219 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "applicationForm": "Application Form",
+    "contactUs": "Contact Us"
+  },
+  "PageLayoutTitle": {
+    "home": "<Welcome to Our Website/>",
+    "about": "<Learn More About Us/>",
+    "services": "<Discover Our Services/>",
+    "portfolio": "<View Our Portfolio/>",
+    "faq": "<Ask Your Questions/>",
+    "blog": "<Read Our Blog/>",
+    "applicationForm": "<Apply Now/>",
+    "contactUs": "<Get in Touch/>"
+  },
+  "HeroContent": {
+    "title": " LT Coding: Limitless Tech, Limitless Possibilities",
+    "description1": "Custom Web & Mobile Solutions for Every Stage of Your Business",
+    "description2": "From landing pages to complex platforms, we build scalable, high-performance solutions that grow with your needs.",
+    "buttonText": "Book a Call"
+  },
+  "HomeSection": {
+    "title": "Bringing Your Vision to Life—Together!",
+    "description": "Transform Your Business with Cutting-Edge Web & Mobile Solutions",
+    "description2": "At LT Coding, we help SMEs stay ahead with innovative web & mobile development tailored to their unique needs. ",
+    "buttonText": "Get to Know Us Better",
+    "item1": {
+      "title": "Proven Track Record",
+      "description": "7+ years of experience, 30+ successful projects, and a track record of delivering impactful digital solutions."
+    },
+    "item2": {
+      "title": "Expert Team",
+      "description": "A highly skilled team of developers, designers, and strategists dedicated to innovation and results."
+    },
+    "item3": {
+      "title": "Tailored, Scalable Solutions",
+      "description": "Custom-built web and mobile solutions designed to grow with your business needs."
+    },
+    "item4": {
+      "title": "Cutting-Edge Technology",
+      "description": "Leveraging the latest tech, including AI-driven solutions, custom CMS, and seamless integrations."
+    },
+    "item5": {
+      "title": "Global Reach, Local Understanding",
+      "description": "Experience working with businesses worldwide while adapting to local market needs."
+    },
+    "item6": {
+      "title": "Results-Driven Approach",
+      "description": "A strategic focus on delivering measurable growth, ensuring every project drives success."
+    }
+  },
+  "HomeOurServices": {
+    "title": "Our Services",
+    "description": "Types of Websites We Build",
+    "description1": "At LT Coding, we specialize in creating custom websites and mobile applications to meet diverse business needs.. Our team builds solutions that are visually stunning, highly functional, and optimized for seamless user experiences across all devices..",
+    "description2": "We create…",
+    "buttonText": "Find the Perfect Web Solution for Your Business",
+    "item1": {
+      "title": "Landing Pages",
+      "description": "We design engaging, high-converting landing pages optimized for  lead generation, product promotion, and brand awareness. Our pages are built for speed and mobile responsiveness to ensure maximum impact.."
+    },
+    "item2": {
+      "title": "Custom CMS Websites",
+      "description": "Take full control of your website's content with our custom CMS solutions. Whether you need a personal blog, portfolio, or a complex enterprise site, we build CMS websites that are scalable, easy to manage and mobile-friendly."
+    },
+    "item3": {
+      "title": "E-Commerce Websites ",
+      "description": "Transform your online store with our fully-featured e-commerce websites and mobile commerce apps. We integrate secure payment gateways, shopping cart solutions, inventory management, and a seamless checkout experience optimized for both web and mobile users."
+    },
+    "item4": {
+      "title": "Corporate Websites",
+      "description": "Showcase your business with a professional, custom-built corporate website or a business app. We design user-friendly, secure solutions that reflect your brand identity and enhance communication with your audience."
+    },
+    "item5": {
+      "title": "Portfolio Websites & Mobile Showcases",
+      "description": "For creatives and businesses looking to showcase their work, we build sleek, modern portfolio websites mobile-friendly showcase apps that present your projects, achievements, and expertise in an engaging way."
+    },
+    "item6": {
+      "title": "Blog Websites",
+      "description": "Whether you’re looking to create a personal blog or a content-driven site, we build blog websites that are easy to maintain, mobile-friendly, and optimized for search engines."
+    },
+    "item7": {
+      "title": "Educational Websites & Learning Apps",
+      "description": "We develop interactive educational platforms and mobile learning apps that facilitate online courses, student engagement, and knowledge sharing. Our solutions include course management, user interaction features, and mobile accessibility."
+    },
+    "item8": {
+      "title": "Event Websites & Mobile Event Apps",
+      "description": "Planning an event? We create dedicated websites dynamic event websites and mobile event apps that provide event details, manage registrations, and keep attendees informed with real-time updates and interactive features."
+    }
+  },
+  "HomeOurClients": {
+    "title": "Our Clients, Our Success",
+    "description1": "Building Digital Excellence Together",
+    "description2": "At LT Coding, we turn ideas into impactful web & mobile solutions, driving innovation and empowering businesses for a future of growth and success.",
+    "buttonText": "Explore Our Portfolio",
+    "item1": {
+      "title": "Chrelo",
+      "description": "Property Rental Platform: Nationwide Platform Specializing in Short-Term Property Rentals for Relocations and Temporary Housing Needs.",
+      "buttonText": "Read More"
+    },
+    "item2": {
+      "title": "Booking FWI",
+      "description": "Travel Booking Solution: Vacation Booking Platform for the French West Indies, Offering Convenient and Secure Booking Options.",
+      "buttonText": "Read More"
+    },
+    "item3": {
+      "title": "Siamoods",
+      "description": "E-Commerce Solution: Fashion Platform Offering a Unique Blend of Contemporary Styles and Traditional Craftsmanship.",
+      "buttonText": "Read More"
+    },
+    "item4": {
+      "title": "Armenia Commerce",
+      "description": "E-Commerce Solution: Connecting Armenian Businesses with Global Markets through an Easy-to-Use Online Platform.",
+      "buttonText": "Read More"
+    },
+    "item5": {
+      "title": "Armenia Realty",
+      "description": "Real Estate Solution: A Platform Connecting Buyers and Sellers in Armenia for Seamless Property Transactions.",
+      "buttonText": "Read More"
+    }
+  },
+  "HomeTestimonials": {
+    "description1": "What People Say",
+    "item1": {
+      "letter": "G",
+      "name": "Gary Segal",
+      "testimonial": "The team brought our vision to life with dedication, creativity, and technical expertise. They were attentive, responsive, and made the whole process smooth and stress-free. Thrilled with the final product!"
+    },
+    "item2": {
+      "letter": "E",
+      "name": "Emily K.",
+      "testimonial": "They turned our idea for a customizable online store into a seamless, user-friendly platform. Their attention to detail and professionalism exceeded expectations. Highly recommended!"
+    },
+    "item3": {
+      "letter": "A",
+      "name": "Alan M.",
+      "testimonial": "They transformed our vision into a user-friendly and visually appealing booking website. Their expertise, innovative approach, and timely delivery made the experience outstanding!"
+    }
+  },
+  "HomeIndustry": {
+    "description1": "Industry News & Insights",
+    "item1": {
+      "title": "The Future of E-Commerce: Trends Every Business Needs to Know for 2024"
+    },
+    "item2": {
+      "title": "From Startup to Scale-Up: How Custom Web Solutions Can Fuel Your Business Growth"
+    },
+    "item3": {
+      "title": "Web Development & Mobile Insights"
+    }
+  },
+  "HomeNewsletter": {
+    "title": "Newsletter",
+    "description1": "Stay Updated with the Latest Trends in Web Development!",
+    "description2": "Sign up for our newsletter to receive industry insights, exclusive offers, and updates straight to your inbox.",
+    "email": "Your Email"
+  },
+  "HomeSendEmail": {
+    "success": "Email sent successfully!",
+    "failedToSend": "Failed to send email",
+    "notValidEmail": "Please enter a valid email address",
+    "enterEmail": "Please enter an email address",
+    "networkError": "Network error. Please try again."
+  },
+  "Footer": {
+    "quickLinks": "Quick Links",
+    "address": "Armenia, Ijevan, Valans, 16",
+    "aboutText": "LT Coding – Building custom websites and digital solutions to help your business grow. For inquiries, reach us at. At LT Coding, we craft bespoke digital experiences that empower businesses to thrive in the online world. As a full-service web and mobile development agency based in Armenia, we combine technical expertise with creative vision to deliver solutions that drive real business results.",
+    "job": "Jobs & Trainings",
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "applicationForm": "Application Form",
+    "contactUs": "Contact Us",
+    "copyright": "© 2025 LT Coding. All Rights Reserved.",
+    "privacyPolicy": "Privacy Policy >> Terms & Conditions"
+  },
+  "AboutUs": {
+    "companyName": "LT Coding",
+    "partnershipHeading": "Your Partner In Innovation",
+    "partnershipDescription": "At LT Coding, we specialize in crafting custom web and mobile solutions designed to help businesses succeed in the digital world. Based in Armenia, our journey began in 2021 with a small, passionate team driven by the desire to turn knowledge and creativity into innovative solutions. Since then, we've grown into a trusted partner for businesses of all sizes, offering cutting-edge software development services and transformative technology solutions.",
+    "missionHeading": "Our Mission",
+    "missionDescription": "We aim to empower businesses with advanced web development services that drive growth, efficiency, and innovation. Whether creating custom software solutions or optimizing user experiences, we are committed to delivering value and results tailored to your needs.",
+    "quoteBtnText": "Get A Quote",
+    "apartHeading": "What Sets Us Apart?",
+    "apartItem1": {
+      "title": "Innovative Solutions",
+      "description": "We combine creativity with the latest technologies like React.js, Laravel, and API integrations to deliver unique web solutions."
+    },
+    "apartItem2": {
+      "title": "Holistic Approach",
+      "description": "Beyond coding, we partner with you to set clear digital goals and achieve them efficiently."
+    },
+    "apartItem3": {
+      "title": "End-to-End Support",
+      "description": "From initial research to deployment and testing, we handle every stage of product development."
+    },
+    "apartItem4": {
+      "title": "Focus on Local and Global Impact",
+      "description": "We prioritize balanced growth in Armenia's IT sector while addressing global market demands."
+    },
+    "contactUsHeading": "Let’s Bring Your Vision to Life—Contact Us Now!",
+    "contactUsBtnText": "Contact Us",
+    "ourTeam": "Meet Our Core Team",
+    "teamDescription": "At LT Coding, we believe our people are our greatest strength. Our success is powered by a collaborative team of over 10 skilled professionals who bring passion and expertise to every project. Meet our core team:",
+    "messageFromCEO": "A Message from Our CEO",
+    "ceoMessage": "At LT Coding, we don’t just build software; we create solutions that empower businesses to thrive in today’s ever-changing digital landscape. With innovation at our core, we are passionate about making technology accessible, scalable, and transformative for our clients. Our commitment to excellence, collaboration, and creativity drives us to go beyond expectations. Let’s build the future together.",
+    "ceoName": "Liana Tsaturyan",
+    "ceoTitle": "CEO & Founder"
+  }
+}
