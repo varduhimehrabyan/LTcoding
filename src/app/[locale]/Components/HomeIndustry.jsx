@@ -40,7 +40,7 @@ export default function HomeIndustry() {
       >
         {tHomeIndustry("description1")}
       </p>
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-8">
+      <div className="grid lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-6 mt-8">
         {items.map((item) => (
           <div
             key={item.id}

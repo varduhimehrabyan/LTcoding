@@ -64,7 +64,7 @@ export default function HomeNewsletter() {
           background: "linear-gradient(180deg, #0C1682 0%, #6201FA 100%)",
         }}
       >
-        <div className="container text-white px-60">
+        <div className="container text-white p-5 2xl:px-60">
           <div className="w-3/4">
             <p className="font-bold md:text-3xl text-xl">
               {tHomeNewsletter("title")}

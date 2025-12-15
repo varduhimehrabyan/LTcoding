@@ -26,7 +26,7 @@ export default function Header() {
   return (
     // <header className="fixed top-2 left-0 right-0 z-50 text-white">
     <header className="py-4 top-2 left-0 right-0 z-50 text-white">
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="px-4 flex items-center justify-between">
         {/* Logo - Smaller on mobile */}
         <div
           className="relative h-16 w-24 md:h-20 md:w-32 cursor-pointer z-10"
@@ -46,15 +46,17 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Button - Only visible on mobile */}
-        <button
-          className="xl:hidden flex flex-col justify-center items-center space-y-1 p-3 z-10 relative secondaryColorLinear rounded-full w-12 h-12"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          <span className="block w-6 h-0.5 bg-white" />
-          <span className="block w-6 h-0.5 bg-white" />
-          <span className="block w-6 h-0.5 bg-white" />
-        </button>
+        <div>
+          <button
+            className="xl:hidden flex flex-col justify-center items-center space-y-1 p-3 z-10 relative secondaryColorLinear rounded-full w-12 h-12"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            <span className="block w-6 h-0.5 bg-white" />
+            <span className="block w-6 h-0.5 bg-white" />
+            <span className="block w-6 h-0.5 bg-white" />
+          </button>
+        </div>
 
         {/* Desktop Language Switcher */}
         <div className="hidden xl:block">

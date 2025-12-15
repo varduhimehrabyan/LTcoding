@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import { useEffect } from "react";
+import Aos from "aos";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -12,6 +13,12 @@ import GrowthIcon from "@/images/icons/growth.svg";
 
 export default function WhatSetsUsApart() {
   const t = useTranslations("AboutUs");
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   const items = [
     {
@@ -45,6 +52,8 @@ export default function WhatSetsUsApart() {
           return (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 250}
               className="group flex flex-col items-center text-center p-5 rounded-xl bg-white/15 transition-all duration-300 hover:bg-white/25"
             >
               {/* Circle wrapper with background change on hover */}
