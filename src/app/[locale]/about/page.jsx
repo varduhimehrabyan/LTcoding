@@ -5,6 +5,8 @@ import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
 import AboutPartnership from "./Components/AboutPartnership";
 import OurMission from "./Components/OurMission";
 import WhatSetsUsApart from "./Components/WhatSetsUsApart";
+import OurTeam from "./Components/OurTeam";
+import FromCEO from "./Components/FromCEO";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -26,10 +28,12 @@ export default function AboutUs({ params }) {
   const t = useTranslations("AboutUs");
 
   return (
-    <div className="">
+    <div>
       <AboutPartnership />
       <OurMission />
       <WhatSetsUsApart />
+      <OurTeam />
+      <FromCEO />
     </div>
   );
 }

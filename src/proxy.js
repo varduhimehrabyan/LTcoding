@@ -3,7 +3,7 @@ import { routing } from "./i18n/routing";
 
 const intlMiddleware = createIntlMiddleware(routing);
 
-export function middleware(request) {
+export function proxy(request) {
   return intlMiddleware(request);
 }
 

@@ -59,7 +59,7 @@ export default function HomeNewsletter() {
     <>
       <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
       <div
-        className="w-full h-96 z-10 flex items-center justify-center px-3"
+        className="w-full h-96 z-10 flex items-center justify-center p-5 px-3"
         style={{
           background: "linear-gradient(180deg, #0C1682 0%, #6201FA 100%)",
         }}
