@@ -185,13 +185,13 @@ export default function ServicesList() {
           >
             <div className="flex-1 space-y-6">
               <div className="flex gap-4 md:group-even:flex-row-reverse md:group-even:text-right">
-                <span className="text-lightGray font-mono text-5xl font-bold shrink-0">
+                <span className="text-lightGray text-base lg:text-5xl font-bold shrink-0">
                   {service.id}
                 </span>
-                <h2 className="text-4xl font-bold tracking-tight w-full">
+                <h2 className="text-lg lg:text-5xl font-bold tracking-tight w-full">
                   {service.title}
                   <div className="flex md:group-even:justify-end mt-6">
-                    <p className="text-lightGray text-base max-w-md">
+                    <p className="text-lightGray text-sm lg:text-base max-w-md">
                       {service.description}
                     </p>
                   </div>

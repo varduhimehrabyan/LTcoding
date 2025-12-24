@@ -1,15 +1,14 @@
-"use client"
+"use client";
 import BlurText from "@/blocks/TextAnimations/BlurText/BlurText";
 import ScheduleButton from "@/Components/ScheduleButton";
 import { useTranslations } from "next-intl";
-import AOS from 'aos';
-import { useEffect } from 'react';
+import AOS from "aos";
+import { useEffect } from "react";
 import HomeSection from "./Components/HomeSection";
 import HomeOurServices from "./Components/HomeOurServices";
 import HomeOurClients from "./Components/HomeOurClients";
 import HomeTestimonials from "./Components/HomeTestimonials";
 import HomeIndustry from "./Components/HomeIndustry";
-
 
 export default function HomePage() {
   const tHero = useTranslations("HeroContent");
@@ -38,16 +37,21 @@ export default function HomePage() {
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="250">
-            <p className="text-white text-center mt-2 md:mt-4">{tHero("description2")}</p>
+            <p className="text-white text-center mt-2 md:mt-4">
+              {tHero("description2")}
+            </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="350">
-            <ScheduleButton className="mt-4 md:mt-8" text={tHero("buttonText")} />
+            <ScheduleButton
+              className="mt-4 md:mt-8"
+              text={tHero("buttonText")}
+            />
           </div>
         </div>
         <HomeSection />
         <HomeOurServices />
         <HomeOurClients />
-        <HomeTestimonials />
+        <HomeTestimonials containerClass="py-12" />
         <HomeIndustry />
       </div>
     </div>

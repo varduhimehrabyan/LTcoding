@@ -18,7 +18,7 @@ export default function Header() {
     { label: t("services"), href: "/services" },
     { label: t("portfolio"), href: "/portfolio" },
     { label: t("faq"), href: "/faq" },
-    { label: t("blog"), href: "/blog" },
+    // { label: t("blog"), href: "/blog" },
     { label: t("applicationForm"), href: "/application-form" },
     { label: t("contactUs"), href: "/contact-us" },
   ];
@@ -26,7 +26,7 @@ export default function Header() {
   return (
     // <header className="fixed top-2 left-0 right-0 z-50 text-white">
     <header className="py-4 top-2 left-0 right-0 z-50 text-white">
-      <div className="px-4 flex items-center justify-between">
+      <div className="px-4 container mx-auto flex items-center justify-between">
         {/* Logo - Smaller on mobile */}
         <div
           className="relative h-16 w-24 md:h-20 md:w-32 cursor-pointer z-10"

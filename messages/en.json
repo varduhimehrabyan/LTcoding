@@ -365,5 +365,19 @@
     },
     "startText": "Start your project with us today",
     "requestBtnText": "Request A Proposal"
+  },
+  "Portfolio": {
+    "title": "Our Work",
+    "heading": "Transforming Visions into Digital Excellence",
+    "description": "Welcome to our portfolio, where creativity, innovation, and technical expertise come together to bring ideas to life. We take pride in delivering tailored solutions that not only meet but exceed client expectations. Explore some of our recent projects.",
+    "testimonials": "Testimonials",
+    "peopleReviewText": "What People Say",
+    "whyChooseUs": "Why Choose Us?",
+    "reason": {
+      "title": "Customized Solutions for Your Business:",
+      "description": "We take the time to understand your unique challenges and create tailored solutions that fit your specific needs, ensuring your success."
+    },
+    "requestingText": "Ready to bring your vision to life? Request Your Free Proposal Now",
+    "requestBtnText": "Request Proposal"
   }
 }

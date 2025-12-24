@@ -7,7 +7,7 @@ import BlurText from "@/blocks/TextAnimations/BlurText/BlurText";
 export default function Services() {
   const t = useTranslations("Services");
   return (
-    <div>
+    <>
       <div className="flex flex-col items-center w-full py-20 px-6">
         <div className="container">
           <div className="flex justify-center">
@@ -16,7 +16,7 @@ export default function Services() {
               delay={50}
               animateBy="words"
               direction="top"
-              className="text-3xl text-center font-bold"
+              className="text-xl lg:text-3xl text-center font-bold"
             />
           </div>
           <BlurText
@@ -24,12 +24,12 @@ export default function Services() {
             delay={100}
             animateBy="words"
             direction="top"
-            className="mt-4 text-center mx-auto text-base"
+            className="mt-4 text-center mx-auto lg:text-base text-sm"
           />
         </div>
       </div>
       <ServicesList />
       <Suggestion />
-    </div>
+    </>
   );
 }
