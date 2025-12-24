@@ -176,7 +176,7 @@ export default function ServicesList() {
     },
   ];
   return (
-    <div className="text-white py-20 px-6 overflow-hidden">
+    <div className="text-white py-20 px-6 lg:px-20 overflow-hidden">
       <div className="container space-y-32">
         {services.map((service) => (
           <div
