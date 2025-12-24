@@ -215,5 +215,155 @@
     "ceoMessage": "At LT Coding, we don’t just build software; we create solutions that empower businesses to thrive in today’s ever-changing digital landscape. With innovation at our core, we are passionate about making technology accessible, scalable, and transformative for our clients. Our commitment to excellence, collaboration, and creativity drives us to go beyond expectations. Let’s build the future together.",
     "ceoName": "Liana Tsaturyan",
     "ceoTitle": "CEO & Founder"
+  },
+  "Services": {
+    "title": "Our Expertise in Website Development",
+    "description": "We specialize in creating tailored websites and mobile solutions that drive engagement and business growth.",
+    "landing": {
+      "title": "Landing Pages",
+      "description": "We design engaging, high-converting landing pages optimized for  lead generation, product promotion, and brand awareness. Our pages are built for speed and mobile responsiveness to ensure maximum impact..",
+      "items": {
+        "item1": {
+          "title": "What’s Included:",
+          "description": "High-converting landing pages optimized for lead generation, product promotion, and brand awareness.  Designed for speed and mobile responsiveness."
+        },
+        "item2": {
+          "title": "What We Do:",
+          "description": "We design sleek, focused landing pages that encourage specific actions like lead capture or product sign-ups. Ensuring your page is optimized for mobile users and loads quickly for a seamless experience."
+        },
+        "item3": {
+          "title": "What You Get:",
+          "description": "A visually attractive, high-converting landing page. Increased lead capture and product promotion success."
+        }
+      }
+    },
+    "customCMS": {
+      "title": "Custom CMS Websites",
+      "description": "Take full control of your website's content with our custom CMS solutions. Whether you need a personal blog, portfolio, or a complex enterprise site, we build CMS websites that are scalable, easy to manage and mobile-friendly.",
+      "items": {
+        "item1": {
+          "title": "What’s Included:",
+          "description": "Custom-built CMS platforms that provide control over your website content. Scalable solutions for blogs, portfolios, and enterprise-level sites. Mobile-friendly design."
+        },
+        "item2": {
+          "title": "What We Do:",
+          "description": "We develop CMS websites tailored to your needs, easy to manage and update. We ensure your platform is SEO-friendly and can scale with your business growth."
+        },
+        "item3": {
+          "title": "What You Get:",
+          "description": "A user-friendly CMS platform that allows effortless content updates. A flexible solution that grows with your business."
+        }
+      }
+    },
+    "eCommerce": {
+      "title": "E-Commerce Websites & Mobile Stores",
+      "description": "Transform your online store with our fully-featured e-commerce websites and mobile commerce apps. We integrate secure payment gateways, shopping cart solutions, inventory management, and a seamless checkout experience optimized for both web and mobile users.",
+      "items": {
+        "item1": {
+          "title": "What’s Included:",
+          "description": "Fully integrated e-commerce platforms with secure payment gateways, shopping cart solutions, inventory management, and optimized for both web and mobile."
+        },
+        "item2": {
+          "title": "What We Do:",
+          "description": "We build responsive e-commerce websites and mobile commerce apps tailored to your brand. We integrate essential features for seamless shopping experiences."
+        },
+        "item3": {
+          "title": "What You Get:",
+          "description": "A secure, high-performance online store for both web and mobile. Increased online sales and improved customer satisfaction."
+        }
+      }
+    },
+    "corporate": {
+      "title": "Corporate Websites & Business Apps",
+      "description": "Showcase your business with a professional, custom-built corporate website or a business app. We design user-friendly, secure solutions that reflect your brand identity and enhance communication with your audience.",
+      "items": {
+        "item1": {
+          "title": "What’s Included:",
+          "description": "Professional, custom-built corporate websites and business apps that reflect your brand identity. User-friendly and secure platforms for communication."
+        },
+        "item2": {
+          "title": "What We Do:",
+          "description": "We design corporate websites and apps that enhance communication, brand presence, and streamline business processes. We ensure easy navigation and a professional look."
+        },
+        "item3": {
+          "title": "What You Get:",
+          "description": "A polished, professional website that enhances your brand's credibility.A platform that helps you effectively communicate with your audience."
+        }
+      }
+    },
+    "portfolio": {
+      "title": " Portfolio Websites & Mobile Showcases",
+      "description": "Present your skills and projects with a visually striking portfolio website or mobile showcase. We craft personalized, responsive designs that effectively display your work, engage your audience, and make a powerful impact on potential clients.",
+      "items": {
+        "item1": {
+          "title": "What’s Included:",
+          "description": "Modern, sleek portfolio websites and mobile-friendly showcase apps that highlight your work and achievements. Optimized for visual impact and user experience."
+        },
+        "item2": {
+          "title": "What We Do:",
+          "description": "We create portfolio websites and apps that effectively present your projects and expertise. We ensure intuitive design and easy navigation for an engaging experience."
+        },
+        "item3": {
+          "title": "What You Get:",
+          "description": "A polished portfolio that highlights your work and expertise.A professional, user-friendly platform to present your creative projects."
+        }
+      }
+    },
+    "blog": {
+      "title": "Blog Websites & Content Apps",
+      "description": "Whether you’re looking to create a personal blog or a content-driven site, we build blog websites that are easy to maintain, mobile-friendly, and optimized for search engines.",
+      "items": {
+        "item1": {
+          "title": "What’s Included:",
+          "description": "SEO-optimized blog websites and content-driven mobile apps. Mobile-friendly design for easy content access on any device."
+        },
+        "item2": {
+          "title": "What We Do:",
+          "description": "We build blog websites and mobile apps that are easy to maintain and optimized for SEO. We ensure a smooth, intuitive design for content creation and engagement."
+        },
+        "item3": {
+          "title": "What You Get:",
+          "description": "A fully optimized, easy-to-maintain blog.An engaging platform to share your thoughts, ideas, or stories with a broad audience."
+        }
+      }
+    },
+    "educational": {
+      "title": "Educational Websites & Learning Apps",
+      "description": "We develop interactive educational platforms and mobile learning apps that facilitate online courses, student engagement, and knowledge sharing. Our solutions include course management, user interaction features, and mobile accessibility.",
+      "items": {
+        "item1": {
+          "title": "What’s Included:",
+          "description": "Interactive educational platforms with course management tools, student interaction features, and mobile accessibility."
+        },
+        "item2": {
+          "title": "What We Do:",
+          "description": "We develop learning platforms and mobile apps that foster online courses, student engagement, and knowledge sharing. We integrate interactive features like quizzes and forums."
+        },
+        "item3": {
+          "title": "What You Get:",
+          "description": "A dynamic, easy-to-navigate educational platform. An enhanced user experience for both students and educators."
+        }
+      }
+    },
+    "event": {
+      "title": "Event Websites & Mobile Event Apps",
+      "description": "Planning an event? We create dedicated websites dynamic event websites and mobile event apps that provide event details, manage registrations, and keep attendees informed with real-time updates and interactive features.",
+      "items": {
+        "item1": {
+          "title": "What’s Included:",
+          "description": "Event-specific websites with event details, registration systems, and real-time updates. Mobile event apps with interactive features"
+        },
+        "item2": {
+          "title": "What We Do:",
+          "description": "We create engaging event websites and apps that manage registrations and provide event details. We integrate features like schedules, live updates, and interactive elements to enhance attendee experience."
+        },
+        "item3": {
+          "title": "What You Get:",
+          "description": "A comprehensive website or app for event management.Seamless atendee experiences with real-time information and engagement"
+        }
+      }
+    },
+    "startText": "Start your project with us today",
+    "requestBtnText": "Request A Proposal"
   }
 }

@@ -84,8 +84,14 @@ export default function WhatSetsUsApart() {
             );
           })}
         </div>
-        <p className="text-center text-2xl">{t("contactUsHeading")}</p>
-        <div data-aos="fade-up" data-aos-delay="400" className="flex justify-center mt-6">
+        <p className="text-white text-center text-2xl">
+          {t("contactUsHeading")}
+        </p>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="flex justify-center mt-6"
+        >
           <ScheduleButton className="" text={t("contactUsBtnText")} />
         </div>
       </div>

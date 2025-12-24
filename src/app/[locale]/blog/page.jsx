@@ -23,7 +23,7 @@ export default function Blog({ params }) {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <p className="text-lg textPrimaryColor">{t("blog")}</p>
+      <p className="text-lg text-teal">{t("blog")}</p>
     </div>
   );
 }

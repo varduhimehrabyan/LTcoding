@@ -30,7 +30,7 @@ export default function HomePage() {
             delay={100}
             animateBy="words"
             direction="top"
-            className="text-xl md:text-3xl font-bold text-center textPrimaryColor"
+            className="text-xl md:text-3xl font-bold text-center text-teal"
           />
           <div data-aos="fade-up" data-aos-delay="100">
             <p className="text-2xl md:text-5xl font-semibold text-white text-center mt-4 md:mt-12">

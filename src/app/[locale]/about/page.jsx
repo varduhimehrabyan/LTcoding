@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { use } from "react";
-import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
 import AboutPartnership from "./Components/AboutPartnership";
 import OurMission from "./Components/OurMission";
 import WhatSetsUsApart from "./Components/WhatSetsUsApart";

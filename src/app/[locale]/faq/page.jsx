@@ -23,7 +23,7 @@ export default function FAQ({ params }) {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <p className="text-lg textPrimaryColor">{t("faq")}</p>
+      <p className="text-lg text-teal">{t("faq")}</p>
     </div>
   );
 }

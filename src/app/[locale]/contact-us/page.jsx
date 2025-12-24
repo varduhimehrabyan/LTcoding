@@ -23,7 +23,7 @@ export default function ContactUs({ params }) {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <p className="text-lg textPrimaryColor">{t("contactUs")}</p>
+      <p className="text-lg text-teal">{t("contactUs")}</p>
     </div>
   );
 }

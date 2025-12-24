@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
             <ul className="space-y-7">
               {contactInfo.map((item, index) => (
-                <li key={index} className="flex items-center gap-1">
+                <li key={index} className="flex items-center gap-1 text-white">
                   <div className="relative h-5 w-5">
                     <Image
                       src={item.icon}
@@ -58,7 +58,7 @@ export default function Footer() {
                       className="object-contain"
                     />
                   </div>
-                  <span>{item.label}</span>
+                  <span className="text-white">{item.label}</span>
                 </li>
               ))}
             </ul>
@@ -66,12 +66,15 @@ export default function Footer() {
 
           <div className="flex flex-col gap-9 w-1/3 pt-5">
             <div className="">
-              <p>{t("quickLinks")}</p>
+              <p className="text-white">{t("quickLinks")}</p>
             </div>
             <nav>
               <ul className="grid grid-cols-2 gap-4">
                 {quickLinks.map((item, index) => (
-                  <li key={index} className="">
+                  <li
+                    key={index}
+                    className="text-white hover:underline cursor-pointer"
+                  >
                     <Link href={item.href}>{item.label}</Link>
                   </li>
                 ))}
@@ -79,7 +82,7 @@ export default function Footer() {
             </nav>
           </div>
           <div className="w-1/3 pt-10 flex flex-col gap-11">
-            <p>{t("aboutText")}</p>
+            <p className="text-white">{t("aboutText")}</p>
             <div className="flex gap-4">
               {socialMediaIcons.map((item, index) => (
                 <div
@@ -100,8 +103,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-full border-t border-white mt-4 py-5 px-3 flex justify-between">
-          <p>{t("copyright")}</p>
-          <p>{t("privacyPolicy")}</p>
+          <p className="text-white">{t("copyright")}</p>
+          <p className="text-white">{t("privacyPolicy")}</p>
         </div>
       </div>
     </footer>

@@ -22,7 +22,7 @@ export default function OurMission() {
       <div className="container">
         <div className="flex justify-between flex-col-reverse lg:flex-row gap-10 md:gap-0 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-4">{t("missionHeading")}</h2>
+            <h2 className="text-white text-4xl font-bold mb-4">{t("missionHeading")}</h2>
             <p className="text-white mt-4 max-w-6xl mx-auto">
               {t("missionDescription")}
             </p>

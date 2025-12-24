@@ -16,11 +16,18 @@ export default function OurTeam() {
   return (
     <div className="flex flex-col items-center w-full py-25 px-6">
       <div className="container">
-        <h3 className="text-4xl text-center font-bold">{t("ourTeam")}</h3>
-        <p className="text-base mt-6 text-center">{t("teamDescription")}</p>
+        <h3 className="text-white text-4xl text-center font-bold">
+          {t("ourTeam")}
+        </h3>
+        <p className="text-white text-base mt-6 text-center">
+          {t("teamDescription")}
+        </p>
         <div className="flex flex-wrap gap-20 justify-center mt-10">
           {teammembers.map((member, index) => (
-            <div key={index} className="flex flex-col items-center mt-3 lg:mt-10">
+            <div
+              key={index}
+              className="flex flex-col items-center mt-3 lg:mt-10"
+            >
               <div
                 className={`relative group flex justify-center items-center flex-col`}
               >

@@ -14,7 +14,7 @@ export default function AboutPartnership() {
             delay={100}
             animateBy="words"
             direction="top"
-            className="text-2xl text-center textPrimaryColor font-extrabold"
+            className="text-2xl text-center text-teal font-extrabold"
           />
         </div>
         <h1 className="text-4xl font-bold text-center text-white my-6">
