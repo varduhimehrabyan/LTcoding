@@ -498,5 +498,30 @@
       }
     ],
     "summary": "By using our website and services, you acknowledge that you have read, understood, and agreed to these Terms and Conditions."
+  },
+  "FAQ": {
+    "title": "FAQ’s",
+    "questions": [
+      {
+        "question": "What services do LT Coding offer?",
+        "answer": "We provide a wide range of web solutions, including front-end and back-end development, SEO services, custom web application development, e-commerce solutions, API integration, content management systems (CMS), and ongoing technical support. Our goal is to help businesses create seamless digital experiences."
+      },
+      {
+        "question": "How long does it take to complete a web development project?",
+        "answer": "Timelines vary depending on project complexity, but a standard website typically takes 4–8 weeks from discovery to launch."
+      },
+      {
+        "question": "Do you offer ongoing support after the website is launched?",
+        "answer": "Yes, we offer ongoing support and maintenance services to ensure your website remains up-to-date and secure."
+      },
+      {
+        "question": "How much does a web development project cost?",
+        "answer": "Cost depends on the scope and complexity of the project, but typically ranges from $5,000 to $20,000."
+      },
+      {
+        "question": "How can I get started with LT Coding?",
+        "answer": "Please visit our website to explore our services and get in touch with us for a free consultation. We look forward to helping you achieve your digital goals!"
+      }
+    ]
   }
 }
