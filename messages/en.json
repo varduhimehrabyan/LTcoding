@@ -181,7 +181,8 @@
     "applicationForm": "Application Form",
     "contactUs": "Contact Us",
     "copyright": "© 2025 LT Coding. All Rights Reserved.",
-    "privacyPolicy": "Privacy Policy >> Terms & Conditions"
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms & Conditions"
   },
   "AboutUs": {
     "companyName": "LT Coding",

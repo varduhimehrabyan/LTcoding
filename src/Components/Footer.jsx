@@ -19,7 +19,7 @@ export default function Footer() {
     { label: t("home"), href: "/" },
     { label: t("job"), href: "/jobs" },
     { label: t("about"), href: "/about" },
-    { label: t("blog"), href: "/blog" },
+    // { label: t("blog"), href: "/blog" },
     { label: t("services"), href: "/services" },
     { label: t("applicationForm"), href: "/application-form" },
     { label: t("portfolio"), href: "/portfolio" },
@@ -35,9 +35,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="2xl:py-20 2xl:pl-80 2xl:pr-50 md:py-40 md:px-20 py-10 px-5">
+    <footer className="2xl:py-20 2xl:pl-80 2xl:pr-50 md:px-20 py-10 px-5">
       <div className="">
-        <div className="flex justify-between flex-col md:flex-row items-center">
+        <div className="flex justify-between flex-col lg:flex-row items-center">
           <div className="flex flex-col gap-7">
             <div className="relative w-30 h-30">
               <Image
@@ -64,9 +64,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-9 w-1/3 pt-5">
+          <div className="flex flex-col w-full gap-9 lg:w-1/3 pt-10 lg:pt-5">
             <div className="">
-              <p className="text-white">{t("quickLinks")}</p>
+              <p className="text-white font-bold">{t("quickLinks")}</p>
             </div>
             <nav>
               <ul className="grid grid-cols-2 gap-4">
@@ -81,7 +81,7 @@ export default function Footer() {
               </ul>
             </nav>
           </div>
-          <div className="w-1/3 pt-10 flex flex-col gap-11">
+          <div className="w-full lg:w-1/3 pt-10 flex flex-col gap-11">
             <p className="text-white">{t("aboutText")}</p>
             <div className="flex gap-4">
               {socialMediaIcons.map((item, index) => (
@@ -102,9 +102,15 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="w-full border-t border-white mt-4 py-5 px-3 flex justify-between">
+        <div className="w-full border-t border-white mt-4 py-5 flex flex-col lg:flex-row justify-between">
           <p className="text-white">{t("copyright")}</p>
-          <p className="text-white">{t("privacyPolicy")}</p>
+          <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 text-white">
+            <Link href={"/privacy-policy"}>{t("privacyPolicy")}</Link>
+            <span className="hidden lg:flex">{">>"}</span>
+            <Link href={"/terms-and-conditions"}>
+              {t("termsAndConditions")}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
