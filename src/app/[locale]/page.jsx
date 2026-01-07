@@ -9,9 +9,11 @@ import HomeOurServices from "./Components/HomeOurServices";
 import HomeOurClients from "./Components/HomeOurClients";
 import HomeTestimonials from "./Components/HomeTestimonials";
 import HomeIndustry from "./Components/HomeIndustry";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
   const tHero = useTranslations("HeroContent");
+  const router = useRouter();
 
   useEffect(() => {
     AOS.init({
@@ -45,6 +47,7 @@ export default function HomePage() {
             <ScheduleButton
               className="mt-4 md:mt-8"
               text={tHero("buttonText")}
+              onClick={() => router.push("/book-call")}
             />
           </div>
         </div>

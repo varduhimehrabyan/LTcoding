@@ -4,11 +4,14 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import ScheduleButton from "@/Components/ScheduleButton";
+import { useRouter } from "next/navigation";
 
 export default function HomeOurClients({
   exploreButtonNeeded = true,
   readMoreButtonNeeded = true,
 }) {
+  const router = useRouter();
+
   const tHomeOurClients = useTranslations("HomeOurClients");
 
   useEffect(() => {
@@ -107,12 +110,12 @@ export default function HomeOurClients({
                   <p className="text-sm md:text-base text-white mt-2 md:mt-4">
                     {item.description}
                   </p>
-                  {readMoreButtonNeeded && (
+                  {/* {readMoreButtonNeeded && (
                     <ScheduleButton
                       className="mt-3 md:mt-6"
                       text={item.buttonText}
                     />
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -128,6 +131,7 @@ export default function HomeOurClients({
             <ScheduleButton
               className="mt-6 md:mt-12"
               text={tHomeOurClients("buttonText")}
+              onClick={() => router.push("/portfolio")}
             />
           </div>
         )}

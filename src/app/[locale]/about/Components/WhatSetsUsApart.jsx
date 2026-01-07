@@ -5,13 +5,14 @@ import Aos from "aos";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import ScheduleButton from "@/Components/ScheduleButton";
-
 import LampIcon from "@/images/icons/lamp.svg";
 import MagnifyingGlassIcon from "@/images/icons/magnifying_glass.svg";
 import HandSupportIcon from "@/images/icons/hand_support.svg";
 import GrowthIcon from "@/images/icons/growth.svg";
+import { useRouter } from "next/navigation";
 
 export default function WhatSetsUsApart() {
+  const router = useRouter();
   const t = useTranslations("AboutUs");
   useEffect(() => {
     Aos.init({
@@ -92,7 +93,11 @@ export default function WhatSetsUsApart() {
           data-aos-delay="400"
           className="flex justify-center mt-6"
         >
-          <ScheduleButton className="" text={t("contactUsBtnText")} />
+          <ScheduleButton
+            className=""
+            text={t("contactUsBtnText")}
+            onClick={() => router.push("/contact-us")}
+          />
         </div>
       </div>
     </div>

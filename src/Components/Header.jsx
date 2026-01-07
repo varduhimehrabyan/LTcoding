@@ -19,7 +19,7 @@ export default function Header() {
     { label: t("portfolio"), href: "/portfolio" },
     { label: t("faq"), href: "/faq" },
     // { label: t("blog"), href: "/blog" },
-    { label: t("applicationForm"), href: "/application-form" },
+    // { label: t("applicationForm"), href: "/application-form" },
     { label: t("contactUs"), href: "/contact-us" },
   ];
 

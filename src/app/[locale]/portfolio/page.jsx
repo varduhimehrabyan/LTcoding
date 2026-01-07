@@ -7,9 +7,11 @@ import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
 import ScheduleButton from "@/Components/ScheduleButton";
 import AOS from "aos";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Portfolio() {
   const t = useTranslations();
+  const router = useRouter();
 
   return (
     <div className="flex flex-col items-center px-5 lg:p-20">
@@ -89,6 +91,7 @@ export default function Portfolio() {
             <ScheduleButton
               className="mt-4 md:mt-8"
               text={t("Portfolio.requestBtnText")}
+              onClick={() => router.push("/request-proposal")}
             />
           </div>
         </div>

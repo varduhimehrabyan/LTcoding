@@ -6,9 +6,11 @@ import code_image from "@/images/code_image.png";
 import ScheduleButton from "@/Components/ScheduleButton";
 import AOS from "aos";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 export default function OurMission() {
   const t = useTranslations("AboutUs");
+  const router = useRouter();
 
   useEffect(() => {
     AOS.init({
@@ -22,7 +24,9 @@ export default function OurMission() {
       <div className="container">
         <div className="flex justify-between flex-col-reverse lg:flex-row gap-10 md:gap-0 items-center">
           <div>
-            <h2 className="text-white text-4xl font-bold mb-4">{t("missionHeading")}</h2>
+            <h2 className="text-white text-4xl font-bold mb-4">
+              {t("missionHeading")}
+            </h2>
             <p className="text-white mt-4 max-w-6xl mx-auto">
               {t("missionDescription")}
             </p>
@@ -30,6 +34,7 @@ export default function OurMission() {
               <ScheduleButton
                 className="mt-4 md:mt-8"
                 text={t("quoteBtnText")}
+                onClick={() => router.push("/get-quote")}
               />
             </div>
           </div>

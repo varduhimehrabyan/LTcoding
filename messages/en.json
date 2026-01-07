@@ -523,5 +523,16 @@
         "answer": "Please visit our website to explore our services and get in touch with us for a free consultation. We look forward to helping you achieve your digital goals!"
       }
     ]
+  },
+  "BookCall": {
+    "title": "Book A Call",
+    "welcomeHeading": "Welcome to LT Coding",
+    "description1": "Thank you for choosing LT Coding! Follow the steps below to schedule a meeting with our team. Let’s Connect (30 Min).",
+    "description2": "Schedule a quick session with us to discuss your project needs and explore tailored solutions.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "dateAndTime": "Select Date & Time",
+    "buttonText": "Send Now"
   }
 }

@@ -4,9 +4,12 @@ import { useTranslations } from "next-intl";
 import ScheduleButton from "@/Components/ScheduleButton";
 import AOS from "aos";
 import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
+import { useRouter } from "next/navigation";
 
 export default function Suggestion() {
   const t = useTranslations("Services");
+  const router = useRouter();
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -31,7 +34,11 @@ export default function Suggestion() {
           data-aos-delay="400"
           className="flex justify-center"
         >
-          <ScheduleButton className="mt-4 md:mt-8" text={t("requestBtnText")} />
+          <ScheduleButton
+            className="mt-4 md:mt-8"
+            text={t("requestBtnText")}
+            onClick={() => router.push("/request-proposal")}
+          />
         </div>
       </div>
     </div>

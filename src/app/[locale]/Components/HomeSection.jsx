@@ -3,9 +3,12 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import ScheduleButton from "@/Components/ScheduleButton";
+import { useRouter } from "next/navigation";
 
 export default function HomeSection() {
   const tHomeSection = useTranslations("HomeSection");
+  const router = useRouter();
+
   useEffect(() => {
     Aos.init({
       duration: 800,
@@ -77,6 +80,7 @@ export default function HomeSection() {
         <ScheduleButton
           className="mt-4 md:mt-8"
           text={tHomeSection("buttonText")}
+          onClick={() => router.push("/about")}
         />
       </div>
     </div>
