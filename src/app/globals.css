@@ -18,6 +18,8 @@
   --color-brightGray: #efefef;
   --color-teal: #008081;
   --color-chineseBlack: #101010;
+  --color-formGray: #1f1f1f;
+  --color-darkFormGray: #353535;
 }
 
 @media (prefers-color-scheme: dark) {

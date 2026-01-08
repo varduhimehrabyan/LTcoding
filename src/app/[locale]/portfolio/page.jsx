@@ -75,7 +75,7 @@ export default function Portfolio() {
             </p>
           </div>
         </div>
-        <div
+        {/* <div
           className="bg-chineseBlack rounded-xl my-20 p-5 lg:p-20"
           data-aos="fade-up"
           data-aos-delay="250"
@@ -94,7 +94,7 @@ export default function Portfolio() {
               onClick={() => router.push("/request-proposal")}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

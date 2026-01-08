@@ -30,13 +30,14 @@ export default function OurMission() {
             <p className="text-white mt-4 max-w-6xl mx-auto">
               {t("missionDescription")}
             </p>
-            <div data-aos="fade-up" data-aos-delay="400" className="flex">
+            {/* TODO: add get quote button */}
+            {/* <div data-aos="fade-up" data-aos-delay="400" className="flex">
               <ScheduleButton
                 className="mt-4 md:mt-8"
                 text={t("quoteBtnText")}
                 onClick={() => router.push("/get-quote")}
               />
-            </div>
+            </div> */}
           </div>
           <div className="relative w-screen lg:w-full lg:max-w-[522px] aspect-[522/321] flex-shrink-0 -mx-6 lg:mx-0">
             <Image

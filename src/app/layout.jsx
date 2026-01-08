@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import GradualBlurMemo from "@/blocks/Animations/GradualBlur/GradualBlur";
 import Particles from "@/blocks/Backgrounds/Particles/Particles";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +37,7 @@ export default function RootLayout({ children }) {
           height="2rem"
         />
         {children}
+        <ToastContainer />
       </body>
     </html>
   );

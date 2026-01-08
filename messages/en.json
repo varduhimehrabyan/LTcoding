@@ -533,6 +533,110 @@
     "email": "Email",
     "phone": "Phone Number",
     "dateAndTime": "Select Date & Time",
-    "buttonText": "Send Now"
+    "buttonText": "Send Now",
+    "success": "Your call has been successfully booked!",
+    "failedToSend": "Failed to book the call. Please try again."
+  },
+  "ContactUs": {
+    "title": "Contact Us",
+    "form": {
+      "fields": {
+        "firstname": {
+          "label": "First Name",
+          "type": "text"
+        },
+        "lastname": {
+          "label": "Last Name",
+          "type": "text"
+        },
+        "companyName": {
+          "label": "Company Name",
+          "type": "text"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "type": "tel"
+        },
+        "email": {
+          "label": "Email Address",
+          "type": "email"
+        },
+        "budget": {
+          "label": "Initial Budget (range)",
+          "type": "text"
+        },
+        "service": {
+          "defaultOption": "Select an option",
+          "label": "Which services would you like?",
+          "type": "select",
+          "options": [
+            {
+              "label": "Landing Pages",
+              "value": "landing"
+            },
+            {
+              "label": "Custom CMS Websites",
+              "value": "cms"
+            },
+            {
+              "label": "E-Commerce Websites & Mobile Stores",
+              "value": "ecommerce"
+            },
+            {
+              "label": "Corporate Websites & Business Apps",
+              "value": "corporate"
+            },
+            {
+              "label": "Portfolio Websites & Mobile Showcases",
+              "value": "portfolio"
+            },
+            {
+              "label": "Blog Websites & Content Apps",
+              "value": "blog"
+            },
+            {
+              "label": "Educational Websites & Learning Apps",
+              "value": "educational"
+            },
+            {
+              "label": "Event Websites & Mobile Event Apps",
+              "value": "event"
+            },
+            {
+              "label": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "howDidYouFindUs": {
+          "defaultOption": "Select an option",
+          "label": "How did you hear about us?",
+          "type": "select",
+          "options": [
+            {
+              "label": "Google Search",
+              "value": "google"
+            },
+            {
+              "label": "Social Media",
+              "value": "social_media"
+            },
+            {
+              "label": "Referral",
+              "value": "referral"
+            },
+            {
+              "label": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "message": {
+          "label": "Tell us about your project and details",
+          "type": "textarea"
+        }
+      },
+      "buttonText": "Send Now"
+    }
   }
 }

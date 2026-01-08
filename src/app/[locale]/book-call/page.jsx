@@ -6,25 +6,59 @@ import "react-datepicker/dist/react-datepicker.css";
 import CalendarIcon from "@/images/icons/calendar.svg";
 import ScheduleButton from "@/Components/ScheduleButton";
 import Image from "next/image";
+import { submitBooking } from "./actions";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function BookCall() {
   const t = useTranslations("BookCall");
+  const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
-    name: "",
+    full_name: "",
     email: "",
     phone: "",
     dateAndTime: null,
   });
+
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!data.dateAndTime) return alert("Please select a date");
 
-    console.log({
-      ...data,
-      timezone,
-      dateAndTimeISO: data.dateAndTime ? data.dateAndTime.toISOString() : null,
-    });
+    setLoading(true);
+
+    // Prepare the exact data your API expects
+    const payload = {
+      full_name: data.full_name,
+      email: data.email,
+      phone: data.phone,
+      // timezone: timezone,
+      // dateAndTimeISO: data.dateAndTime.toISOString(),
+      datetime: `${data.dateAndTime.toLocaleDateString()} ${data.dateAndTime.toLocaleTimeString()} ${timezone}`,
+    };
+
+    // CALL THE SERVER ACTION (This bypasses the /am/ middleware)
+    const result = await submitBooking(payload);
+
+    if (result.success) {
+      toast.success(t("success"), {
+        position: "top-right",
+        className: "custom-toast",
+        bodyClassName: "custom-toast-body",
+        progressClassName: "custom-progress",
+      });
+      setData({ full_name: "", email: "", phone: "", dateAndTime: null });
+    } else {
+      toast.error(t("failedToSend"), {
+        position: "top-right",
+        className: "custom-toast",
+        bodyClassName: "custom-toast-body",
+        progressClassName: "custom-progress",
+      });
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -42,65 +76,55 @@ export default function BookCall() {
           {t("description1")}
         </p>
         <p className="text-center text-base text-white">{t("description2")}</p>
+
         <form
           onSubmit={handleSubmit}
           className="container flex flex-col gap-6 max-w-3xl mt-10"
         >
           <input
-            id="name"
-            name="name"
-            autoComplete="name"
+            id="full_name"
+            name="full_name"
             type="text"
+            required
+            value={data.full_name}
             placeholder={t("name")}
-            className="text-white text-2xl p-6 border border-white rounded-lg w-full bg-transparent"
-            onChange={(e) => {
-              setData((prev) => {
-                return { ...prev, name: e.target.value };
-              });
-            }}
+            className="text-white text-2xl p-6 border border-white rounded-lg w-full bg-transparent outline-none focus:border-blue-500"
+            onChange={(e) => setData({ ...data, full_name: e.target.value })}
           />
           <input
             id="email"
             name="email"
-            autoComplete="email"
             type="email"
+            required
+            value={data.email}
             placeholder={t("email")}
-            className="text-white text-2xl p-6 border border-white rounded-lg w-full bg-transparent"
-            onChange={(e) => {
-              setData((prev) => {
-                return { ...prev, email: e.target.value };
-              });
-            }}
+            className="text-white text-2xl p-6 border border-white rounded-lg w-full bg-transparent outline-none focus:border-blue-500"
+            onChange={(e) => setData({ ...data, email: e.target.value })}
           />
           <input
             id="phone"
             name="phone"
-            autoComplete="tel"
             type="tel"
+            required
+            value={data.phone}
             placeholder={t("phone")}
-            className="text-white text-2xl p-6 border border-white rounded-lg w-full bg-transparent"
-            onChange={(e) => {
-              setData((prev) => {
-                return { ...prev, phone: e.target.value };
-              });
-            }}
+            className="text-white text-2xl p-6 border border-white rounded-lg w-full bg-transparent outline-none focus:border-blue-500"
+            onChange={(e) => setData({ ...data, phone: e.target.value })}
           />
+
           {/* Custom Date Picker */}
           <div className="relative">
             <DatePicker
               selected={data.dateAndTime}
-              onChange={(date) => {
-                setData((prev) => {
-                  return { ...prev, dateAndTime: date };
-                });
-              }}
+              onChange={(date) => setData({ ...data, dateAndTime: date })}
               showTimeSelect
               timeFormat="HH:mm"
               timeIntervals={15}
               dateFormat="MMMM d, yyyy h:mm aa"
               placeholderText="Select Date"
               minDate={new Date()}
-              className="text-white text-2xl p-6 border border-white rounded-lg w-full bg-transparent cursor-pointer"
+              required
+              className="text-white text-2xl p-6 border border-white rounded-lg w-full bg-transparent cursor-pointer outline-none"
               calendarClassName="custom-calendar"
             />
             <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -109,11 +133,18 @@ export default function BookCall() {
                 alt={"Calendar Icon"}
                 width={48}
                 height={48}
-                className=" group-hover:invert transition-all duration-300"
+                className="group-hover:invert transition-all duration-300"
               />
             </div>
           </div>
-          <ScheduleButton text={t("buttonText")} className="w-1/3" />
+
+          <ScheduleButton
+            text={loading ? "Processing..." : t("buttonText")}
+            disabled={loading}
+            className={`w-1/3 transition-opacity ${
+              loading ? "opacity-50 cursor-not-allowed" : "opacity-100"
+            }`}
+          />
         </form>
       </div>
     </div>
