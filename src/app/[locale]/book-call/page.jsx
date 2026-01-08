@@ -7,7 +7,7 @@ import CalendarIcon from "@/images/icons/calendar.svg";
 import ScheduleButton from "@/Components/ScheduleButton";
 import Image from "next/image";
 import { submitBooking } from "./actions";
-import { ToastContainer, toast, Slide } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function BookCall() {
@@ -28,17 +28,13 @@ export default function BookCall() {
 
     setLoading(true);
 
-    // Prepare the exact data your API expects
     const payload = {
       full_name: data.full_name,
       email: data.email,
       phone: data.phone,
-      // timezone: timezone,
-      // dateAndTimeISO: data.dateAndTime.toISOString(),
       datetime: `${data.dateAndTime.toLocaleDateString()} ${data.dateAndTime.toLocaleTimeString()} ${timezone}`,
     };
 
-    // CALL THE SERVER ACTION (This bypasses the /am/ middleware)
     const result = await submitBooking(payload);
 
     if (result.success) {

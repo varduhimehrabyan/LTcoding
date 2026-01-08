@@ -539,6 +539,8 @@
   },
   "ContactUs": {
     "title": "Հետադարձ կապ",
+    "success": "Ձեր հաղորդագրությունը հաջողությամբ ուղարկվել է։ Շնորհակալություն, որ կապ հաստատեցիք մեզ հետ։",
+    "failedToSend": "Չհաջողվեց ուղարկել ձեր հաղորդագրությունը։ Խնդրում ենք փորձել կրկին։",
     "form": {
       "fields": {
         "firstname": {
@@ -568,7 +570,7 @@
         "service": {
           "defaultOption": "Ընտրեք տարբերակը",
           "label": "Ո՞ր ծառայություններն եք ցանկանում",
-          "type": "select",
+          "type": "multiselect",
           "options": [
             {
               "label": "Լենդինգ էջեր",
@@ -614,25 +616,25 @@
           "type": "select",
           "options": [
             {
-              "label": "Google Search",
+              "label": "Գուգլի որոնում",
               "value": "google"
             },
             {
-              "label": "Social Media",
+              "label": "Սոցիալական ցանցեր",
               "value": "social_media"
             },
             {
-              "label": "Referral",
+              "label": "Ուղղորդել են",
               "value": "referral"
             },
             {
-              "label": "Other",
+              "label": "Այլ",
               "value": "other"
             }
           ]
         },
         "message": {
-          "label": "Պատմեք մեզ Ձեր նախագծի և մանրամասների մասին*",
+          "label": "Պատմեք մեզ Ձեր նախագծի և մանրամասների մասին",
           "type": "textarea"
         }
       },

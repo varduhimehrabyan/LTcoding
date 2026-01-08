@@ -568,7 +568,7 @@
         "service": {
           "defaultOption": "Select an option",
           "label": "Which services would you like?",
-          "type": "select",
+          "type": "multiselect",
           "options": [
             {
               "label": "Landing Pages",
