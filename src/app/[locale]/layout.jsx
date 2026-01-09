@@ -48,7 +48,7 @@ export default async function LocaleLayout({ children, params }) {
       <div className="w-full bg-black min-h-screen">
         <Header />
         <main className="z-[1000]">{children}</main>
-        <HomeNewsletter />
+        {/* <HomeNewsletter /> */}
         <Footer />
       </div>
     </NextIntlClientProvider>
