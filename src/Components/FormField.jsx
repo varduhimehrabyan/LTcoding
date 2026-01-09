@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const FormField = ({ fieldKey, config, value, onChange }) => {
+  console.log(config)
   const baseStyles =
     "w-full bg-[#333333] p-4 text-white rounded-md border-none focus:ring-1 focus:ring-teal-500 outline-none appearance-none";
   const labelStyles = "block mb-2 text-sm font-medium text-gray-300";
@@ -38,11 +39,13 @@ const FormField = ({ fieldKey, config, value, onChange }) => {
           {" "}
           {/* Parent ensures full width */}
           <label htmlFor={fieldKey} className={labelStyles}>
-            {config.label}*
+            {config.label}
+            {config.required ? "*" : ""}
           </label>
           <div className="relative w-full">
             <select
               id={fieldKey}
+              required={config.required}
               className={`${baseStyles} cursor-pointer`}
               value={value || ""} // Use the value prop from the parent
               onChange={(e) => onChange(fieldKey, e.target.value)}
@@ -84,7 +87,10 @@ const FormField = ({ fieldKey, config, value, onChange }) => {
 
       return (
         <div className="w-full relative" ref={containerRef}>
-          <label className={labelStyles}>{config.label}*</label>
+          <label className={labelStyles}>
+            {config.label}
+            {config.required ? "*" : ""}
+          </label>
           <div className="relative">
             {/* The "Select" Box */}
             <div
@@ -162,7 +168,8 @@ const FormField = ({ fieldKey, config, value, onChange }) => {
       return (
         <div className="md:col-span-2">
           <label htmlFor={fieldKey} className={labelStyles}>
-            {config.label}*
+            {config.label}
+            {config.required ? "*" : ""}
           </label>
           <textarea
             id={fieldKey}
@@ -170,6 +177,7 @@ const FormField = ({ fieldKey, config, value, onChange }) => {
             className={`${baseStyles} resize-none`}
             value={value || ""} // Use the value prop from the parent
             onChange={(e) => onChange(fieldKey, e.target.value)}
+            required={config.required}
           />
         </div>
       );
@@ -178,13 +186,14 @@ const FormField = ({ fieldKey, config, value, onChange }) => {
       return (
         <div>
           <label htmlFor={fieldKey} className={labelStyles}>
-            {config.label}*
+            {config.label}
+            {config.required ? "*" : ""}
           </label>
           <input
             type={config.type}
             id={fieldKey}
             className={baseStyles}
-            required
+            required={config.required}
             value={value || ""} // Use the value prop from the parent
             onChange={(e) => onChange(fieldKey, e.target.value)}
           />

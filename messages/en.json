@@ -543,32 +543,39 @@
       "fields": {
         "firstname": {
           "label": "First Name",
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "lastname": {
           "label": "Last Name",
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         "companyName": {
           "label": "Company Name",
-          "type": "text"
+          "type": "text",
+          "required": false
         },
         "phone": {
           "label": "Phone Number",
-          "type": "tel"
+          "type": "tel",
+          "required": true
         },
         "email": {
           "label": "Email Address",
-          "type": "email"
+          "type": "email",
+          "required": true
         },
         "budget": {
           "label": "Initial Budget (range)",
-          "type": "text"
+          "type": "text",
+          "required": false
         },
         "service": {
           "defaultOption": "Select an option",
           "label": "Which services would you like?",
           "type": "multiselect",
+          "required": false,
           "options": [
             {
               "label": "Landing Pages",
