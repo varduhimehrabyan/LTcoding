@@ -16,7 +16,7 @@ export default function Services() {
               delay={50}
               animateBy="words"
               direction="top"
-              className="text-xl lg:text-3xl text-center font-bold"
+              className="text-xl lg:text-3xl text-center font-bold text-white"
             />
           </div>
           <BlurText
@@ -24,7 +24,7 @@ export default function Services() {
             delay={100}
             animateBy="words"
             direction="top"
-            className="mt-4 text-center mx-auto lg:text-base text-sm"
+            className="mt-4 text-center mx-auto lg:text-base text-sm text-white"
           />
         </div>
       </div>

@@ -106,7 +106,7 @@ export default function Footer() {
           <p className="text-white">{t("copyright")}</p>
           <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 text-white">
             <Link href={"/privacy-policy"}>{t("privacyPolicy")}</Link>
-            <span className="hidden lg:flex">{">>"}</span>
+            <span className="hidden lg:flex text-white">{">>"}</span>
             <Link href={"/terms-and-conditions"}>
               {t("termsAndConditions")}
             </Link>

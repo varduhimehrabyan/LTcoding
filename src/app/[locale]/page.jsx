@@ -4,12 +4,14 @@ import ScheduleButton from "@/Components/ScheduleButton";
 import { useTranslations } from "next-intl";
 import AOS from "aos";
 import { useEffect } from "react";
-import HomeSection from "./Components/HomeSection";
 import HomeOurServices from "./Components/HomeOurServices";
 import HomeOurClients from "./Components/HomeOurClients";
 import HomeTestimonials from "./Components/HomeTestimonials";
 import HomeIndustry from "./Components/HomeIndustry";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import HomeOurAdvantages from "./Components/HomeOurAdventages";
+import Threads from "@/blocks/Backgrounds/Threads";
 
 export default function HomePage() {
   const tHero = useTranslations("HeroContent");
@@ -24,8 +26,12 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="container">
-        <div className="flex flex-col items-center justify-center md:h-screen py-12">
+      <div
+        className="w-full h-[600px] relative py-12"
+        style={{ width: "100%", height: "600px", position: "relative" }}
+      >
+        <Threads amplitude={6} distance={0.6} />
+        <div className="z-10 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center px-6">
           <BlurText
             text={tHero("title")}
             delay={100}
@@ -34,7 +40,7 @@ export default function HomePage() {
             className="text-xl md:text-3xl font-bold text-center text-teal"
           />
           <div data-aos="fade-up" data-aos-delay="100">
-            <p className="text-2xl md:text-5xl font-semibold text-white text-center mt-4 md:mt-12">
+            <p className="text-2xl md:text-5xl font-semibold text-white text-center mt-5 md:mt-12">
               {tHero("description1")}
             </p>
           </div>
@@ -50,9 +56,11 @@ export default function HomePage() {
               onClick={() => router.push("/book-call")}
             />
           </div>
-        </div>
-        <HomeSection />
-        <HomeOurServices />
+        </div>{" "}
+      </div>
+      <HomeOurAdvantages />
+      <HomeOurServices />{" "}
+      <div className="container">
         <HomeOurClients />
         <HomeTestimonials containerClass="py-12" />
         <HomeIndustry />

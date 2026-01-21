@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
           <Particles particleCount={20000} />

@@ -20,12 +20,13 @@
     "contactUs": "<Get in Touch/>"
   },
   "HeroContent": {
-    "title": " LT Coding: Limitless Tech, Limitless Possibilities",
+    "title": " LT Coding: Limitless Tech, limitless possibilities",
     "description1": "Custom Web & Mobile Solutions for Every Stage of Your Business",
     "description2": "From landing pages to complex platforms, we build scalable, high-performance solutions that grow with your needs.",
     "buttonText": "Book a Call"
   },
   "HomeSection": {
+    "ourName": "LT Coding",
     "title": "Bringing Your Vision to Life—Together!",
     "description": "Transform Your Business with Cutting-Edge Web & Mobile Solutions",
     "description2": "At LT Coding, we help SMEs stay ahead with innovative web & mobile development tailored to their unique needs. ",

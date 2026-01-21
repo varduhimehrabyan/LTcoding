@@ -19,7 +19,7 @@ export default function Button({
     >
       <span className="text-white font-semibold text-lg">{children}</span>
 
-      <div className="bg-[#008080] rounded-full w-10 h-10 flex items-center justify-center ml-4 group-hover:bg-[#009a9a] transition-colors">
+      <div className="bg-teal rounded-full w-10 h-10 flex items-center justify-center ml-4 group-hover:bg-[#009a9a] transition-colors">
         <img
           src={SendImg}
           alt="icon"

@@ -29,14 +29,14 @@ export default function Portfolio() {
             delay={200}
             animateBy="words"
             direction="top"
-            className="mt-4 text-center mx-auto text-xl lg:text-5xl"
+            className="mt-4 text-center mx-auto text-xl lg:text-5xl text-white"
           />
           <BlurText
             text={t("Portfolio.description")}
             delay={50}
             animateBy="words"
             direction="top"
-            className="mt-6 text-center mx-auto lg:text-lg text-sm"
+            className="mt-6 text-center mx-auto lg:text-lg text-sm text-white"
           />
         </div>
         <div className="py-20">
@@ -67,10 +67,10 @@ export default function Portfolio() {
               direction="top"
               className="text-4xl lg:text-7xl text-center text-lightGray font-extrabold lg:h-30"
             />
-            <p className="text-lg mt-10 font-bold">
+            <p className="text-lg mt-10 font-bold text-white">
               {t("Portfolio.reason.title")}
             </p>
-            <p className="mt-4 text-base">
+            <p className="mt-4 text-base text-white">
               {t("Portfolio.reason.description")}
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function Portfolio() {
           data-aos="fade-up"
           data-aos-delay="250"
         >
-          <h3 className="text-xl lg:text-4xl font-bold text-center mb-5">
+          <h3 className="text-xl lg:text-4xl font-bold text-center mb-5 text-white">
             {t("Portfolio.requestingText")}
           </h3>
           <div

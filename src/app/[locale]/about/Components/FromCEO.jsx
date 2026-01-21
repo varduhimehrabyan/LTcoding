@@ -26,8 +26,10 @@ export default function FromCEO() {
               {t("ceoMessage")}
             </p>
             <p className="mt-6 text-white flex gap-3 lg:gap-5 flex-col lg:flex">
-              <span className="text-sm lg:text-4xl italic">{t("ceoName")}</span>
-              <span className="text-sm lg:text-2xl font-bold">
+              <span className="text-sm lg:text-4xl italic text-white">
+                {t("ceoName")}
+              </span>
+              <span className="text-sm lg:text-2xl font-bold text-white">
                 {t("ceoTitle")}
               </span>
             </p>

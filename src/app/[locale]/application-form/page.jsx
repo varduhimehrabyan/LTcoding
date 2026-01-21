@@ -22,7 +22,7 @@ export default function ApplicationForm({ params }) {
   const t = useTranslations("Navigation");
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center">
       <p className="text-lg text-teal">{t("applicationForm")}</p>
     </div>
   );

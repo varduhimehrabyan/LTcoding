@@ -188,7 +188,7 @@ export default function ServicesList() {
                 <span className="text-lightGray text-base lg:text-5xl font-bold shrink-0">
                   {service.id}
                 </span>
-                <h2 className="text-lg lg:text-5xl font-bold tracking-tight w-full">
+                <h2 className="text-lg lg:text-5xl font-bold tracking-tight w-full text-white">
                   {service.title}
                   <div className="flex md:group-even:justify-end mt-6">
                     <p className="text-lightGray text-sm lg:text-base max-w-md">

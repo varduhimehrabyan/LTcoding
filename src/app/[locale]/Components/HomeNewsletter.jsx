@@ -66,11 +66,13 @@ export default function HomeNewsletter() {
       >
         <div className="container text-white p-5 2xl:px-60">
           <div className="w-3/4">
-            <p className="font-bold md:text-3xl text-xl">
+            <p className="font-bold md:text-3xl text-xl text-white">
               {tHomeNewsletter("title")}
             </p>
-            <p className="font-bold mt-4">{tHomeNewsletter("description1")}</p>
-            <p>{tHomeNewsletter("description2")}</p>
+            <p className="font-bold mt-4 text-white">
+              {tHomeNewsletter("description1")}
+            </p>
+            <p className="text-white">{tHomeNewsletter("description2")}</p>
             <div className="mt-6 flex items-center text-black justify-between w-full bg-white rounded-full p-3">
               <input
                 id="email"

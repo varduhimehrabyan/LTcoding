@@ -45,7 +45,7 @@ export default async function LocaleLayout({ children, params }) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <div className="w-full bg-black min-h-screen">
+      <div className="w-full bg-black">
         <Header />
         <main className="z-[1000]">{children}</main>
         {/* <HomeNewsletter /> */}

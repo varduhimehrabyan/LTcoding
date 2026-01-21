@@ -1,18 +1,17 @@
 import Aos from "aos";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState, useRef } from "react";
-import Image from "next/image";
 import ScheduleButton from "@/Components/ScheduleButton";
-import { useRouter } from "next/navigation";
 
 export default function HomeOurServices() {
   const tHomeOurServices = useTranslations("HomeOurServices");
   const router = useRouter();
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [direction, setDirection] = useState("down");
-  const containerRef = useRef(null);
+  useEffect(() => {
+    Aos.init({ duration: 800, once: true });
+  }, []);
 
   const items = [
     {
@@ -73,46 +72,8 @@ export default function HomeOurServices() {
     },
   ];
 
-  const currentItem = items[currentIndex];
-
-  useEffect(() => {
-    Aos.init({ duration: 800, once: true });
-
-    const handleScroll = (e) => {
-      e.preventDefault();
-      if (isAnimating) return;
-
-      const delta = e.deltaY;
-      if (delta > 0 && currentIndex < items.length - 1) {
-        setDirection("down");
-        changeItem(currentIndex + 1);
-      } else if (delta < 0 && currentIndex > 0) {
-        setDirection("up");
-        changeItem(currentIndex - 1);
-      }
-    };
-
-    const changeItem = (newIndex) => {
-      if (newIndex === currentIndex) return;
-      setIsAnimating(true);
-      setTimeout(() => setCurrentIndex(newIndex), 200);
-      setTimeout(() => setIsAnimating(false), 800);
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("wheel", handleScroll, { passive: false });
-    }
-
-    return () => {
-      if (container) {
-        container.removeEventListener("wheel", handleScroll);
-      }
-    };
-  }, [currentIndex, isAnimating]);
-
   return (
-    <div className="w-full md:py-12">
+    <div className="w-full py-20 text-white overflow-hidden">
       {/* Header Section */}
       <div className="mb-12">
         <h2
@@ -145,99 +106,115 @@ export default function HomeOurServices() {
         </p>
       </div>
 
-      {/* Desktop Layout (progress bar + single item) */}
-      <div
-        ref={containerRef}
-        className="hidden md:flex min-h-[600px] items-start justify-start p-8 gap-12"
-      >
-        {/* Progress Bar */}
-        <div className="flex flex-col items-center">
-          {items.map((_, index) => (
-            <React.Fragment key={index}>
-              <div
-                onClick={() => {
-                  if (!isAnimating && index !== currentIndex) {
-                    setDirection(index > currentIndex ? "down" : "up");
-                    setCurrentIndex(index);
-                  }
-                }}
-                className={`w-6 h-6 rounded-full cursor-pointer transition-all duration-500 transform
-                                    ${
-                                      index === currentIndex
-                                        ? "bg-white border-4 border-[#404040] scale-110 shadow-lg"
-                                        : index < currentIndex
-                                        ? "bg-white border-4 border-white"
-                                        : "bg-[#404040] border-4 border-[#404040]"
-                                    }`}
-              />
-              {index < items.length - 1 && (
-                <div
-                  className={`w-1 h-8 transition-colors duration-500 
-                                        ${
-                                          index < currentIndex
-                                            ? "bg-white"
-                                            : "bg-[#404040]"
-                                        }`}
-                />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
+      {/* Desktop Layout */}
+      <div className="hidden md:block relative max-w-7xl mx-auto px-4">
+        {/* Vertical Center Line */}
+        <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-white/20 -translate-x-1/2 z-0" />
 
-        {/* Main Content Area */}
-        <div className="flex-1">
-          <div className="flex justify-between">
-            <div
-              className={`flex gap-4 transition-all duration-500 ease-in-out ${
-                isAnimating
-                  ? direction === "down"
-                    ? "opacity-0 translate-y-8"
-                    : "opacity-0 -translate-y-8"
-                  : "opacity-100 translate-y-0"
-              }`}
-            >
-              <div className="flex flex-col">
-                <p className="text-white text-lg font-bold">
-                  {currentItem.count}
-                </p>
-                <p className="text-white text-2xl font-semibold">
-                  {currentItem.title}
-                </p>
-                <p className="text-white max-w-md">{currentItem.description}</p>
+        <div className="space-y-12">
+          {items.map((item, index) => {
+            const isLeft = index % 2 === 0;
+            return (
+              <div
+                key={item.id}
+                className={`flex items-center w-full ${isLeft ? "flex-row" : "flex-row-reverse"}`}
+              >
+                {/* 1. TEXT CAPSULE (45%) */}
+                <div
+                  className="w-full lg:w-[50%] px-6"
+                  data-aos={isLeft ? "fade-right" : "fade-left"}
+                >
+                  <div className="relative bg-white/10 border border-white/10 rounded-full p-6 py-4 flex items-center shadow-2xl backdrop-blur-md">
+                    <div
+                      className={`w-[6px] h-12 bg-white rounded-full mx-4 shadow-[0_0_15px_white] ${isLeft ? "order-last" : "order-first"}`}
+                    />
+
+                    <div
+                      className={`flex-1 ${isLeft ? "text-right" : "text-left"}`}
+                    >
+                      <h4 className="font-bold text-lg uppercase leading-tight text-white">
+                        {item.title}
+                      </h4>
+                      <p className="text-[12px] text-white/60 mt-1 leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2. CONNECTION LINE TO HEX (5%) */}
+                <div className="w-[5%] flex items-center">
+                  <div className="w-full h-[1px] bg-[#008081]" />
+                </div>
+
+                {/* 3. CENTRAL HEXAGON NODE (10%) */}
+                <div className="w-[10%] flex justify-center relative z-10">
+                  <div
+                    className="w-20 h-24 bg-[#008081] flex items-center justify-center shadow-[0_0_30px_rgba(0,128,129,0.5)]"
+                    style={{
+                      clipPath:
+                        "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                    }}
+                  >
+                    <div
+                      className="w-[88%] h-[88%] bg-[#0c1b2a] flex items-center justify-center"
+                      style={{
+                        clipPath:
+                          "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                      }}
+                    >
+                      <span className="text-2xl font-black text-white">
+                        {item.count}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 4. CONNECTION LINE TO ICON (5%) */}
+                <div className="w-[5%] flex items-center">
+                  <div className="w-full h-[1px] bg-[#008081]" />
+                </div>
+
+                {/* 5. ICON CIRCLE (15% - Adjusted to be closer) */}
+                <div
+                  className="w-[5%] px-2 flex justify-center"
+                  data-aos="zoom-in"
+                >
+                  <div className="w-[50px] h-[50px] flex items-center justify-center backdrop-blur-sm bg-white/50 rounded-sm transition-all cursor-pointer shadow-lg">
+                    {/* <Image
+                      src={item.img}
+                      alt="Service Icon"
+                      width={28}
+                      height={28}
+                      className="brightness-200 grayscale opacity-80"
+                    /> */}
+                  </div>
+                </div>
               </div>
-            </div>
-            <Image
-              src={currentItem.img}
-              alt={currentItem.title}
-              width={400}
-              height={400}
-              className={`transition-all duration-500 ease-in-out ${
-                isAnimating
-                  ? direction === "down"
-                    ? "translate-y-10 opacity-0"
-                    : "-translate-y-10 opacity-0"
-                  : "translate-y-0 opacity-100"
-              } rounded-lg`}
-            />
-          </div>
+            );
+          })}
         </div>
       </div>
 
-      {/* Mobile Layout (simple flex col list) */}
-      <div className="flex flex-col gap-10 md:hidden px-4">
-        {items.map((item, index) => (
-          <div key={item.id} data-aos="fade-up" data-aos-delay={index * 200}>
-            <Image
-              src={item.img}
-              alt={item.title}
-              width={124}
-              height={117}
-              className="mb-4 w-full rounded-lg"
-            />
-            <div className="flex flex-col">
-              <p className="text-white text-lg font-bold">{item.count}</p>
-              <p className="text-white text-lg font-semibold">{item.title}</p>
-              <p className="text-white text-sm max-w-md">{item.description}</p>
+      {/* Mobile Layout */}
+      <div className="md:hidden space-y-8 px-6 relative">
+        <div className="absolute left-8 top-0 bottom-0 w-[1px] bg-[#008081]/30" />
+        {items.map((item) => (
+          <div key={item.id} className="relative pl-12" data-aos="fade-up">
+            <div
+              className="absolute left-[-16px] top-0 w-8 h-10 bg-[#008081] flex items-center justify-center font-bold text-xs"
+              style={{
+                clipPath:
+                  "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+              }}
+            >
+              {item.count}
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <h4 className="text-teal font-bold text-sm uppercase">
+                {item.title}
+              </h4>
+              <p className="text-white/50 text-xs mt-2">{item.description}</p>
             </div>
           </div>
         ))}
@@ -246,9 +223,12 @@ export default function HomeOurServices() {
       <div
         data-aos="fade-up"
         data-aos-delay="400"
-        className="flex md:justify-center py-4"
+        className="flex md:justify-center py-4 mt-10"
       >
-        <ScheduleButton text={tHomeOurServices("buttonText")}  onClick={() => router.push("/services")} />
+        <ScheduleButton
+          text={tHomeOurServices("buttonText")}
+          onClick={() => router.push("/services")}
+        />
       </div>
     </div>
   );

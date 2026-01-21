@@ -26,7 +26,7 @@ export default function Suggestion() {
             delay={100}
             animateBy="words"
             direction="top"
-            className="text-lg lg:text-3xl text-center font-bold"
+            className="text-lg lg:text-3xl text-center font-bold text-white"
           />
         </div>
         <div
