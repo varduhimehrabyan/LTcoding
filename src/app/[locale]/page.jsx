@@ -19,8 +19,9 @@ export default function HomePage() {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
-      once: true,
+      // duration: 800,
+      once: false,
+      mirror: true,
     });
   }, []);
 
@@ -30,7 +31,7 @@ export default function HomePage() {
         className="w-full h-[600px] relative py-12"
         style={{ width: "100%", height: "600px", position: "relative" }}
       >
-        <Threads amplitude={6} distance={0.6} />
+        <Threads amplitude={4} distance={0.6} color={[0, 128, 129]} />
         <div className="z-10 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center px-6">
           <BlurText
             text={tHero("title")}

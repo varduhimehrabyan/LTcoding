@@ -15,7 +15,8 @@ export default function OurMission() {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true,
+      once: false,
+      mirror: true,
     });
   }, []);
 

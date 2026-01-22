@@ -22,21 +22,27 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-          <Particles particleCount={20000} />
+        {/* Fixed particles that stay visible while scrolling */}
+        <div className="fixed w-screen h-screen z-10 pointer-events-none">
+          <Particles particleCount={2000} />
         </div>
-        <GradualBlurMemo
-          opacity={1}
-          strength={1}
-          preset="page-footer"
-          divCount={10}
-          height="2rem"
-        />
-        {children}
+
+        {/* Main content wrapper */}
+        <div className="relative aaaaaaaa">
+          <GradualBlurMemo
+            opacity={1}
+            strength={1}
+            preset="page-footer"
+            divCount={10}
+            height="2rem"
+          />
+          {children}
+        </div>
+
         <ToastContainer />
       </body>
     </html>

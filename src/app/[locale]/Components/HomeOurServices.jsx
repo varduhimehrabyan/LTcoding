@@ -10,7 +10,7 @@ export default function HomeOurServices() {
   const router = useRouter();
 
   useEffect(() => {
-    Aos.init({ duration: 800, once: true });
+    Aos.init({ duration: 800, once: false, mirror: true });
   }, []);
 
   const items = [

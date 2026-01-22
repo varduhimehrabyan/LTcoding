@@ -9,7 +9,8 @@ export default function HomeIndustry() {
   useEffect(() => {
     Aos.init({
       duration: 800,
-      once: true,
+      once: false,
+      mirror: true,
     });
   }, []);
 

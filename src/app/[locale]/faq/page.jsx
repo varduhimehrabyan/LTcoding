@@ -12,7 +12,7 @@ export default function FAQPage() {
   const faqs = t.raw("questions");
 
   useEffect(() => {
-    AOS.init({ duration: 300, once: true });
+    AOS.init({ duration: 300, once: false, mirror: true });
   }, []);
 
   const toggleFAQ = (index) => {

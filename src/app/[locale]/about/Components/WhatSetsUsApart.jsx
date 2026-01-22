@@ -17,7 +17,8 @@ export default function WhatSetsUsApart() {
   useEffect(() => {
     Aos.init({
       duration: 800,
-      once: true,
+      once: false,
+      mirror: true,
     });
   }, []);
 

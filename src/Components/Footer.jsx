@@ -17,13 +17,12 @@ export default function Footer() {
 
   const quickLinks = [
     { label: t("home"), href: "/" },
-    { label: t("job"), href: "/jobs" },
+    // { label: t("job"), href: "/jobs" },
     { label: t("about"), href: "/about" },
     // { label: t("blog"), href: "/blog" },
     { label: t("services"), href: "/services" },
-    { label: t("applicationForm"), href: "/application-form" },
+    // { label: t("applicationForm"), href: "/application-form" },
     { label: t("portfolio"), href: "/portfolio" },
-    { label: t("applicationForm"), href: "/application-form" },
     { label: t("contactUs"), href: "/contact-us" },
   ];
 
@@ -105,9 +104,13 @@ export default function Footer() {
         <div className="w-full border-t border-white mt-4 py-5 flex flex-col lg:flex-row justify-between">
           <p className="text-white">{t("copyright")}</p>
           <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 text-white">
-            <Link href={"/privacy-policy"}>{t("privacyPolicy")}</Link>
-            <span className="hidden lg:flex text-white">{">>"}</span>
-            <Link href={"/terms-and-conditions"}>
+            <Link className="hover:underline" href={"/privacy-policy"}>
+              {t("privacyPolicy")}
+            </Link>
+            <span className="hidden lg:flex text-white mx-2"> </span>
+            <span className="hidden lg:flex text-white">{"|"}</span>
+            <span className="hidden lg:flex text-white mx-2"> </span>
+            <Link className="hover:underline" href={"/terms-and-conditions"}>
               {t("termsAndConditions")}
             </Link>
           </div>

@@ -17,7 +17,8 @@ export default function HomeOurClients({
   useEffect(() => {
     Aos.init({
       duration: 800,
-      once: true,
+      once: false,
+      mirror: true,
     });
   }, []);
 

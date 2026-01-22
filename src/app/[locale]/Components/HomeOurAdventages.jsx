@@ -15,7 +15,7 @@ export default function HomeOurAdvantages() {
     Aos.init({
       duration: 1000,
       once: false,
-      offset: 100,
+      mirror: true,
     });
   }, []);
 
