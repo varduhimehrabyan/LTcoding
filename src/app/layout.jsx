@@ -26,13 +26,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        {/* Fixed particles that stay visible while scrolling */}
         <div className="fixed w-screen h-screen z-10 pointer-events-none">
           <Particles particleCount={2000} />
         </div>
 
-        {/* Main content wrapper */}
-        <div className="relative aaaaaaaa">
+        <div className="relative">
           <GradualBlurMemo
             opacity={1}
             strength={1}

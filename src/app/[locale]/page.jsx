@@ -1,15 +1,15 @@
 "use client";
+
 import BlurText from "@/blocks/TextAnimations/BlurText/BlurText";
 import ScheduleButton from "@/Components/ScheduleButton";
 import { useTranslations } from "next-intl";
 import AOS from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import HomeOurServices from "./Components/HomeOurServices";
 import HomeOurClients from "./Components/HomeOurClients";
 import HomeTestimonials from "./Components/HomeTestimonials";
 import HomeIndustry from "./Components/HomeIndustry";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import HomeOurAdvantages from "./Components/HomeOurAdventages";
 import Threads from "@/blocks/Backgrounds/Threads";
 
@@ -27,11 +27,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center">
-      <div
-        className="w-full h-[600px] relative py-12"
-        style={{ width: "100%", height: "600px", position: "relative" }}
-      >
-        <Threads amplitude={4} distance={0.6} color={[0, 128, 129]} />
+      <div className="w-full h-[600px] relative py-12">
         <div className="z-10 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center px-6">
           <BlurText
             text={tHero("title")}
@@ -57,14 +53,15 @@ export default function HomePage() {
               onClick={() => router.push("/book-call")}
             />
           </div>
-        </div>{" "}
+        </div>
       </div>
       <HomeOurAdvantages />
-      <HomeOurServices />{" "}
+      <HomeOurServices />
       <div className="container">
         <HomeOurClients />
         <HomeTestimonials containerClass="py-12" />
-        <HomeIndustry />
+        {/* <HomeIndustry /> */}{" "}
+        {/* Temporarily removed , will be added back in the future for blog*/}
       </div>
     </div>
   );

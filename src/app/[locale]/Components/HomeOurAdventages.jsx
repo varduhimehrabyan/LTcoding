@@ -1,5 +1,4 @@
 import Aos from "aos";
-import "aos/dist/aos.css";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { useEffect } from "react";
@@ -96,8 +95,8 @@ export default function HomeOurAdvantages() {
             // --- SHORT LINE LOGIC ---
             // startOffset: how far from hub center the line begins
             // endOffset: how far from node center the line ends
-            const startOffset = 160; 
-            const endOffset = 90;   
+            const startOffset = 160;
+            const endOffset = 90;
 
             const lineX1 = centerX + startOffset * Math.cos(angleRad);
             const lineY1 = centerY + startOffset * Math.sin(angleRad);
@@ -107,7 +106,6 @@ export default function HomeOurAdvantages() {
 
             return (
               <g key={item.id}>
-                {/* ANIMATED DASHED LINE */}
                 <motion.line
                   x1={lineX1}
                   y1={lineY1}
@@ -115,7 +113,7 @@ export default function HomeOurAdvantages() {
                   y2={lineY2}
                   stroke="#008081"
                   strokeWidth="3"
-                  strokeDasharray="20 15" // Creates the dashed pattern
+                  strokeDasharray="20 15"
                   strokeLinecap="butt"
                   className="opacity-50"
                   initial={{ pathLength: 0, opacity: 0 }}
@@ -128,10 +126,18 @@ export default function HomeOurAdvantages() {
                   }}
                 />
 
-                {/* NODE GROUP */}
-                <g
+                <motion.g
                   className="animate-float"
-                  style={{ transformOrigin: `${y2}px ${x2}px` }}
+                  style={{ transformOrigin: `${x2}px ${y2}px` }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    // Delay starts after the line is mostly drawn (line delay + duration)
+                    delay: idx * 0.15 + 1.2,
+                    duration: 2,
+                    ease: "easeOut",
+                  }}
                 >
                   <circle
                     cx={x2}
@@ -154,7 +160,6 @@ export default function HomeOurAdvantages() {
                     strokeWidth="3"
                     filter="url(#glow)"
                   />
-
                   <foreignObject
                     x={isRightSide ? x2 + 100 : x2 - 580}
                     y={y2 - 100}
@@ -163,7 +168,9 @@ export default function HomeOurAdvantages() {
                   >
                     <div
                       className={`flex flex-col gap-2 ${
-                        isRightSide ? "items-start text-left" : "items-end text-right"
+                        isRightSide
+                          ? "items-start text-left"
+                          : "items-end text-right"
                       }`}
                     >
                       <h3 className="text-white text-xl md:text-3xl leading-tight uppercase font-bold">
@@ -175,12 +182,11 @@ export default function HomeOurAdvantages() {
                       </p>
                     </div>
                   </foreignObject>
-                </g>
+                </motion.g>
               </g>
             );
           })}
 
-          {/* CENTRAL HUB */}
           <g>
             <circle
               cx={centerX}
@@ -220,12 +226,21 @@ export default function HomeOurAdvantages() {
 
       <style jsx>{`
         @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
         }
         @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(1deg); }
+          0%,
+          100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(1deg);
+          }
         }
         .animate-spin-slow {
           animation: spin-slow 15s linear infinite;
