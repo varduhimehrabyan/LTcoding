@@ -4,7 +4,14 @@ import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState, useRef } from "react";
 import ScheduleButton from "@/Components/ScheduleButton";
-
+import landingIcon from "@/images/icons/landing.svg";
+import customCMSIcon from "@/images/icons/custom_cms.svg";
+import eCommerceIcon from "@/images/icons/e_commerce.svg";
+import corporateIcon from "@/images/icons/corporate.svg";
+import portfolioIcon from "@/images/icons/portfolio.svg";
+import blogIcon from "@/images/icons/blog.svg";
+import educationalIcon from "@/images/icons/educational.svg";
+import eventIcon from "@/images/icons/event.svg";
 export default function HomeOurServices() {
   const tHomeOurServices = useTranslations("HomeOurServices");
   const router = useRouter();
@@ -16,56 +23,56 @@ export default function HomeOurServices() {
   const items = [
     {
       id: 1,
-      img: "/HomeOurServices/item1.png",
+      icon: landingIcon,
       title: tHomeOurServices("item1.title"),
       description: tHomeOurServices("item1.description"),
       count: "01",
     },
     {
       id: 2,
-      img: "/HomeOurServices/item2.png",
+      icon: customCMSIcon,
       title: tHomeOurServices("item2.title"),
       description: tHomeOurServices("item2.description"),
       count: "02",
     },
     {
       id: 3,
-      img: "/HomeOurServices/item3.png",
+      icon: eCommerceIcon,
       title: tHomeOurServices("item3.title"),
       description: tHomeOurServices("item3.description"),
       count: "03",
     },
     {
       id: 4,
-      img: "/HomeOurServices/item4.png",
+      icon: corporateIcon,
       title: tHomeOurServices("item4.title"),
       description: tHomeOurServices("item4.description"),
       count: "04",
     },
     {
       id: 5,
-      img: "/HomeOurServices/item5.png",
+      icon: portfolioIcon,
       title: tHomeOurServices("item5.title"),
       description: tHomeOurServices("item5.description"),
       count: "05",
     },
     {
       id: 6,
-      img: "/HomeOurServices/item6.png",
+      icon: blogIcon,
       title: tHomeOurServices("item6.title"),
       description: tHomeOurServices("item6.description"),
       count: "06",
     },
     {
       id: 7,
-      img: "/HomeOurServices/item7.png",
+      icon: educationalIcon,
       title: tHomeOurServices("item7.title"),
       description: tHomeOurServices("item7.description"),
       count: "07",
     },
     {
       id: 8,
-      img: "/HomeOurServices/item8.png",
+      icon: eventIcon,
       title: tHomeOurServices("item8.title"),
       description: tHomeOurServices("item8.description"),
       count: "08",
@@ -180,14 +187,14 @@ export default function HomeOurServices() {
                   className="w-[5%] px-2 flex justify-center"
                   data-aos="zoom-in"
                 >
-                  <div className="w-[50px] h-[50px] flex items-center justify-center backdrop-blur-sm bg-white/50 rounded-sm transition-all cursor-pointer shadow-lg">
-                    {/* <Image
-                      src={item.img}
+                  <div className="w-[50px] h-[50px] flex items-center justify-center backdrop-blur-sm bg-white/20 hover:bg-teal rounded-sm transition-all cursor-pointer shadow-lg">
+                    <Image
+                      src={item.icon}
                       alt="Service Icon"
                       width={28}
                       height={28}
                       className="brightness-200 grayscale opacity-80"
-                    /> */}
+                    />
                   </div>
                 </div>
               </div>

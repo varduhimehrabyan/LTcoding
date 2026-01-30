@@ -27,9 +27,11 @@ export default function Footer() {
   ];
 
   const socialMediaIcons = [
-    { label: "Facebook", icon: "/Icons/facebook.svg" },
-    { label: "Twitter", icon: "/Icons/twitter.svg" },
-    { label: "Instagram", icon: "/Icons/instagram.svg" },
+    {
+      label: "Facebook",
+      icon: "/Icons/facebook.svg",
+      link: "https://www.facebook.com/LTcoding",
+    },
     { label: "LinkedIn", icon: "/Icons/linkedin.svg" },
   ];
 
