@@ -27,47 +27,69 @@ export default function HomeOurAdvantages() {
     { id: 6, img: "/HomeSectionImages/item6.png" },
   ];
 
+  // SVG Constants for Desktop
   const canvasWidth = 2600;
   const canvasHeight = 1400;
   const centerX = canvasWidth / 2;
   const centerY = canvasHeight / 2;
-
   const radiusX = 750;
   const radiusY = 480;
-
   const sideAngles = [240, 180, 120, 60, 0, 300];
 
   return (
     <div className="w-full py-20 flex flex-col justify-center overflow-hidden bg-[#030712]">
+      {/* Header Section */}
       <div className="z-10 relative flex flex-col items-center text-center mb-16 px-6">
         <h2
           data-aos="fade-up"
           data-aos-delay="100"
-          className="text-lg font-bold text-white"
+          className="text-lg font-bold text-white uppercase tracking-wider"
         >
           {tHomeSection("title")}
         </h2>
-
         <p
           data-aos="fade-up"
           data-aos-delay="200"
-          className="text-2xl md:text-5xl font-semibold text-white mt-4 md:mt-12"
+          className="text-3xl md:text-5xl font-semibold text-white mt-4 md:mt-12 max-w-4xl"
         >
           {tHomeSection("description")}
         </p>
         <p
           data-aos="fade-up"
           data-aos-delay="300"
-          className="text-white mt-2 md:mt-4"
+          className="text-gray-400 mt-4 max-w-2xl"
         >
           {tHomeSection("description2")}
         </p>
       </div>
 
+      {/* --- MOBILE VERSION --- */}
+      <div className="lg:hidden flex flex-col items-center gap-12 px-6 relative">
+        {items.map((item, idx) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1 }}
+            className="flex flex-col items-center group"
+          >
+            <h3 className="text-white text-xl font-bold uppercase mb-2">
+              {tHomeSection(`item${item.id}.title`)}
+            </h3>
+            <div className="h-[2px] w-12 bg-[#008081] mb-3" />
+            <p className="text-gray-400 text-base leading-relaxed max-w-sm">
+              {tHomeSection(`item${item.id}.description`)}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* --- DESKTOP VERSION (Hidden on small screens) --- */}
       <div
         data-aos="fade-up"
         data-aos-delay="400"
-        className="relative flex justify-center items-center select-none px-20"
+        className="hidden lg:flex relative justify-center items-center select-none px-20"
       >
         <svg
           viewBox={`0 0 ${canvasWidth} ${canvasHeight}`}
@@ -86,21 +108,14 @@ export default function HomeOurAdvantages() {
           {items.map((item, idx) => {
             const angle = sideAngles[idx];
             const angleRad = (angle * Math.PI) / 180;
-
-            // Coordinates for the Node centers
             const x2 = centerX + radiusX * Math.cos(angleRad);
             const y2 = centerY + radiusY * Math.sin(angleRad);
             const isRightSide = x2 > centerX;
 
-            // --- SHORT LINE LOGIC ---
-            // startOffset: how far from hub center the line begins
-            // endOffset: how far from node center the line ends
             const startOffset = 160;
             const endOffset = 90;
-
             const lineX1 = centerX + startOffset * Math.cos(angleRad);
             const lineY1 = centerY + startOffset * Math.sin(angleRad);
-
             const lineX2 = centerX + (radiusX - endOffset) * Math.cos(angleRad);
             const lineY2 = centerY + (radiusY - endOffset) * Math.sin(angleRad);
 
@@ -120,7 +135,7 @@ export default function HomeOurAdvantages() {
                   whileInView={{ pathLength: 1, opacity: 0.5 }}
                   viewport={{ once: true }}
                   transition={{
-                    duration: 1.5,
+                    duration: 1,
                     delay: idx * 0.15,
                     ease: "easeInOut",
                   }}
@@ -133,9 +148,8 @@ export default function HomeOurAdvantages() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{
-                    // Delay starts after the line is mostly drawn (line delay + duration)
-                    delay: idx * 0.15 + 1.2,
-                    duration: 2,
+                    delay: idx * 0.15,
+                    duration: 1.5,
                     ease: "easeOut",
                   }}
                 >
@@ -150,7 +164,6 @@ export default function HomeOurAdvantages() {
                     className="animate-spin-slow"
                     style={{ transformOrigin: `${x2}px ${y2}px` }}
                   />
-
                   <circle
                     cx={x2}
                     cy={y2}
@@ -167,11 +180,7 @@ export default function HomeOurAdvantages() {
                     height="250"
                   >
                     <div
-                      className={`flex flex-col gap-2 ${
-                        isRightSide
-                          ? "items-start text-left"
-                          : "items-end text-right"
-                      }`}
+                      className={`flex flex-col gap-2 ${isRightSide ? "items-start text-left" : "items-end text-right"}`}
                     >
                       <h3 className="text-white text-xl md:text-3xl leading-tight uppercase font-bold">
                         {tHomeSection(`item${item.id}.title`)}
@@ -187,6 +196,7 @@ export default function HomeOurAdvantages() {
             );
           })}
 
+          {/* Central Hub */}
           <g>
             <circle
               cx={centerX}
@@ -224,6 +234,18 @@ export default function HomeOurAdvantages() {
         </svg>
       </div>
 
+      {/* Button Section */}
+      <div
+        data-aos="fade-up"
+        className="flex justify-center mt-12 md:mt-24 relative z-30 px-6"
+      >
+        <ScheduleButton
+          text={tHomeSection("buttonText")}
+          onClick={() => router.push("/about")}
+          className="w-full md:w-auto border-2 border-[#008081] text-white hover:bg-[#008081] transition-all px-16 py-4 font-bold tracking-widest uppercase"
+        />
+      </div>
+
       <style jsx>{`
         @keyframes spin-slow {
           from {
@@ -249,17 +271,6 @@ export default function HomeOurAdvantages() {
           animation: float 6s ease-in-out infinite;
         }
       `}</style>
-
-      <div
-        data-aos="fade-up"
-        className="flex justify-center mt-12 relative z-30"
-      >
-        <ScheduleButton
-          text={tHomeSection("buttonText")}
-          onClick={() => router.push("/about")}
-          className="border-2 border-[#008081] text-white hover:bg-[#008081] transition-all px-16 py-4 font-bold tracking-widest"
-        />
-      </div>
     </div>
   );
 }

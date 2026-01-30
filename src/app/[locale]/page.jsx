@@ -27,8 +27,8 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="w-full h-[600px] relative py-12">
-        <div className="z-10 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center px-6">
+      <div className="w-full py-12">
+        <div className="w-full h-full flex flex-col items-center justify-center px-6 py-10 lg:py-15">
           <BlurText
             text={tHero("title")}
             delay={100}
@@ -57,7 +57,7 @@ export default function HomePage() {
       </div>
       <HomeOurAdvantages />
       <HomeOurServices />
-      <div className="container">
+      <div className="container px-10 lg:px-0">
         <HomeOurClients />
         <HomeTestimonials containerClass="py-12" />
         {/* <HomeIndustry /> */}{" "}

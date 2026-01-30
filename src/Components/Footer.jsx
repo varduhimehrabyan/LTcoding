@@ -37,7 +37,7 @@ export default function Footer() {
     <footer className="2xl:py-20 2xl:pl-80 2xl:pr-50 md:px-20 py-10 px-5">
       <div className="">
         <div className="flex justify-between flex-col lg:flex-row items-center">
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-col gap-7 w-full lg:w-auto">
             <div className="relative w-30 h-30">
               <Image
                 src="/Icons/Logo.svg"

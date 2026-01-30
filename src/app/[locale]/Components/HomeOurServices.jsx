@@ -75,7 +75,7 @@ export default function HomeOurServices() {
   return (
     <div className="w-full py-20 text-white overflow-hidden">
       {/* Header Section */}
-      <div className="mb-12">
+      <div className="mb-12 px-10 lg:px-20">
         <h2
           data-aos="fade-up"
           data-aos-delay="100"
