@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import cofaunderImage from "@/images/cofounder.jpg";
+import cofaunderImage from "@/images/cofounder.png";
 import { useTranslations } from "next-intl";
 
 export default function FromCEO() {
@@ -10,7 +10,7 @@ export default function FromCEO() {
     <div className="flex bg-chineseBlack flex-col items-center w-full py-25 px-6">
       <div className="container">
         <div className="flex flex-col justify-between lg:flex-row gap-10 md:gap-10 items-center">
-          <div className="relative rounded-xl w-screen lg:w-full lg:max-w-[522px] aspect-[522/321] flex-shrink-0 -mx-6 lg:mx-0">
+          <div className="relative rounded-xl lg:w-full lg:max-w-[522px] aspect-[522/321] flex-shrink-0 -mx-6 lg:mx-0">
             <Image
               src={cofaunderImage}
               alt="cofounder image"

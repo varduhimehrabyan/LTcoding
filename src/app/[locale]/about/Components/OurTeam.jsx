@@ -1,16 +1,19 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import cofaunderImage from "@/images/cofounder.jpg";
+import cofaunderImage from "@/images/cofounder.png";
+import ArtyomImage from "@/images/Artyom.png";
+import InesaImage from "@/images/Inesa.png";
+import VarduhiImage from "@/images/Varduhi.png";
 
 export default function OurTeam() {
   const t = useTranslations("AboutUs");
 
   const teammembers = [
     { name: "Liana Tsaturyan", role: "CEO", picture: cofaunderImage },
-    { name: "Varduhi Meharabyan", role: "Full Stack Developer", picture: null },
-    { name: "Artyom Gishyan", role: "Frontend Developer", picture: null },
-    { name: "Inesa Baghinyan", role: " Project Manager", picture: null },
+    { name: "Varduhi Meharabyan", role: "Full Stack Developer", picture: VarduhiImage },
+    { name: "Artyom Gishyan", role: "Frontend Developer", picture: ArtyomImage },
+    { name: "Inesa Baghinyan", role: "Project Manager", picture: InesaImage },
   ];
 
   return (
@@ -33,7 +36,7 @@ export default function OurTeam() {
               >
                 {member.picture ? (
                   <div className="relative z-50 w-40 h-40 rounded-full overflow-hidden mb-4">
-                    <Image src={member.picture} alt={member.name} fill />
+                    <Image src={member.picture} alt={member.name} fill className="object-cover" />
                   </div>
                 ) : (
                   <div
