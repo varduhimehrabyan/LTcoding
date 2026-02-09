@@ -20,15 +20,15 @@
     "contactUs": "<Get in Touch/>"
   },
   "HeroContent": {
-    "title": " LT Coding: Limitless Tech, limitless possibilities",
-    "description1": "Custom Web & Mobile Solutions for Every Stage of Your Business",
+    "title": "LT Coding: Limitless Tech, Limitless Possibilities",
+    "description1": "Custom Web and Mobile Solutions for Every Stage of Your Business",
     "description2": "From landing pages to complex platforms, we build scalable, high-performance solutions that grow with your needs.",
     "buttonText": "Book a Call"
   },
   "HomeSection": {
     "ourName": "LT Coding",
     "title": "Bringing Your Vision to Life — Together!",
-    "description": "Transform Your Business with Cutting-Edge Web & Mobile Solutions",
+    "description": "Transform Your Business with Cutting-Edge Web & Mobile Solutions.",
     "description2": "At LT Coding, we help SMEs stay ahead with innovative web & mobile development tailored to their unique needs. ",
     "buttonText": "Get to Know Us Better",
     "item1": {
@@ -59,19 +59,19 @@
   "HomeOurServices": {
     "title": "Our Services",
     "description": "Types of Websites We Build",
-    "description1": "At LT Coding, we specialize in creating custom websites and mobile applications to meet diverse business needs.. Our team builds solutions that are visually stunning, highly functional, and optimized for seamless user experiences across all devices..",
+    "description1": "At LT Coding, we specialize in creating custom websites and mobile applications to meet diverse business needs. Our team builds solutions that are visually stunning, highly functional, and optimized for seamless user experiences across all devices..",
     "description2": "We create…",
     "buttonText": "Find the Perfect Web Solution for Your Business",
     "item1": {
       "title": "Landing Pages",
-      "description": "We design engaging, high-converting landing pages optimized for  lead generation, product promotion, and brand awareness. Our pages are built for speed and mobile responsiveness to ensure maximum impact.."
+      "description": "We design engaging, high-converting landing pages optimized for lead generation, product promotion, and brand awareness. Our pages are built for speed and mobile responsiveness to ensure maximum impact.."
     },
     "item2": {
       "title": "Custom CMS Websites",
       "description": "Take full control of your website's content with our custom CMS solutions. Whether you need a personal blog, portfolio, or a complex enterprise site, we build CMS websites that are scalable, easy to manage and mobile-friendly."
     },
     "item3": {
-      "title": "E-Commerce Websites ",
+      "title": "E-Commerce Websites",
       "description": "Transform your online store with our fully-featured e-commerce websites and mobile commerce apps. We integrate secure payment gateways, shopping cart solutions, inventory management, and a seamless checkout experience optimized for both web and mobile users."
     },
     "item4": {
@@ -172,7 +172,7 @@
   "Footer": {
     "quickLinks": "Quick Links",
     "address": "Armenia, Ijevan, Valans, 16",
-    "aboutText": "LT Coding – Building custom websites and digital solutions to help your business grow. For inquiries, reach us at. At LT Coding, we craft bespoke digital experiences that empower businesses to thrive in the online world. As a full-service web and mobile development agency based in Armenia, we combine technical expertise with creative vision to deliver solutions that drive real business results.",
+    "aboutText": "LT Coding - Building custom websites and digital solutions to help your business grow. For inquiries, reach us at. At LT Coding, we craft bespoke digital experiences that empower businesses to thrive in the online world. As a full-service web and mobile development agency based in Armenia, we combine technical expertise with creative vision to deliver solutions that drive real business results.",
     "job": "Jobs & Trainings",
     "home": "Home",
     "about": "About Us",
@@ -181,7 +181,7 @@
     "blog": "Blog",
     "applicationForm": "Application Form",
     "contactUs": "Contact Us",
-    "copyright": "© 2025 LT Coding. All Rights Reserved.",
+    "copyright": "©2026 LT Coding. All Rights Reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsAndConditions": "Terms & Conditions"
   },
@@ -294,7 +294,7 @@
       }
     },
     "portfolio": {
-      "title": " Portfolio Websites & Mobile Showcases",
+      "title": "Portfolio Websites & Mobile Showcases",
       "description": "Present your skills and projects with a visually striking portfolio website or mobile showcase. We craft personalized, responsive designs that effectively display your work, engage your audience, and make a powerful impact on potential clients.",
       "items": {
         "item1": {
@@ -439,6 +439,10 @@
         "description": "If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at:"
       }
     ],
+    "contacts": {
+      "email": "Email",
+      "phone": "Phone"
+    },
     "summary": "By using our website, you consent to the collection and use of your personal information as described in this Privacy Policy."
   },
   "Terms": {
@@ -517,7 +521,7 @@
       },
       {
         "question": "How much does a web development project cost?",
-        "answer": "Cost depends on the scope and complexity of the project, but typically ranges from $5,000 to $20,000."
+        "answer": "Cost depends on the scope and complexity of the project, with prices typically starting from $500."
       },
       {
         "question": "How can I get started with LT Coding?",
@@ -536,10 +540,16 @@
     "dateAndTime": "Select Date & Time",
     "buttonText": "Send Now",
     "success": "Your call has been successfully booked!",
-    "failedToSend": "Failed to book the call. Please try again."
+    "failedToSend": "Failed to book the call. Please try again.",
+    "thankYou": {
+      "title": "Thank You for Booking with LT Coding!",
+      "description": "We’ve received your booking and can’t wait to connect with you. Our team will review your information and prepare for our meeting. If you have any additional details to share, feel free to reach out. See you soon!"
+    }
   },
   "ContactUs": {
     "title": "Contact Us",
+    "success": "Your message has been successfully sent!",
+    "failedToSend": "Failed to send message now. Please try again later.",
     "form": {
       "fields": {
         "firstname": {
@@ -645,6 +655,15 @@
         }
       },
       "buttonText": "Send Now"
+    }
+  },
+  "ApplicationForm": {
+    "title": "Get A Custom Quote",
+    "form": {
+      "title": "Get A Custom Quote",
+      "description": "We are here to help you !",
+      "buttonText": "Submit Application",
+      "fields": {}
     }
   }
 }

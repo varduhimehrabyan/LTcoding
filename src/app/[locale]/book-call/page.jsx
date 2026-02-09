@@ -9,9 +9,13 @@ import Image from "next/image";
 import { submitBooking } from "./actions";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
 
 export default function BookCall() {
   const t = useTranslations("BookCall");
+  const router = useRouter();
+  const locale = useLocale();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     full_name: "",
@@ -38,13 +42,8 @@ export default function BookCall() {
     const result = await submitBooking(payload);
 
     if (result.success) {
-      toast.success(t("success"), {
-        position: "top-right",
-        className: "custom-toast",
-        bodyClassName: "custom-toast-body",
-        progressClassName: "custom-progress",
-      });
       setData({ full_name: "", email: "", phone: "", dateAndTime: null });
+      router.push(`/${locale}/thank-you?from=book-call`);
     } else {
       toast.error(t("failedToSend"), {
         position: "top-right",

@@ -28,7 +28,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col items-center">
       <div className="w-full py-12">
-        <div className="w-full h-full flex flex-col items-center justify-center px-6 py-10 lg:py-15">
+        <div className="w-full h-full lg:h-screen flex flex-col items-center justify-center px-6">
           <BlurText
             text={tHero("title")}
             delay={100}
@@ -37,7 +37,7 @@ export default function HomePage() {
             className="text-xl md:text-3xl font-bold text-center text-teal"
           />
           <div data-aos="fade-up" data-aos-delay="100">
-            <p className="text-2xl md:text-5xl font-semibold text-white text-center mt-5 md:mt-12">
+            <p className="text-2xl md:text-5xl font-semibold text-white text-center my-5 md:my-10">
               {tHero("description1")}
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function HomePage() {
           </div>
           <div data-aos="fade-up" data-aos-delay="350">
             <ScheduleButton
-              className="mt-4 md:mt-8"
+              className="mt-4 md:mt-10"
               text={tHero("buttonText")}
               onClick={() => router.push("/book-call")}
             />

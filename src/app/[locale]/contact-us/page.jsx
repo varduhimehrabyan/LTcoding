@@ -63,7 +63,7 @@ export default function ContactUs({ params }) {
   return (
     <div className="flex flex-col items-center px-5 lg:p-20">
       <div className="container">
-        <h1 className="py-20 text-5xl lg:text-5xl font-bold text-center text-white">
+        <h1 className="py-10 text-5xl lg:text-5xl font-bold text-center text-white">
           {t("title")}
         </h1>
       </div>

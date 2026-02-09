@@ -37,8 +37,8 @@ export default function page() {
         </div>
 
         <div>
-          <p className="my-8 text-white">Email: info@lt-coding.com</p>
-          <p className="text-white">Phone: +374 (93) 74-47-55</p>
+          <p className="my-8 text-white">{t("contacts.email")}: info@lt-coding.com</p>
+          <p className="text-white">{t("contacts.phone")}: +374 (93) 74-47-55</p>
           <p className="my-10 text-white">{t("summary")}</p>
         </div>
       </div>
